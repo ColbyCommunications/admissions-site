@@ -1,6 +1,6 @@
 # Change the name property to the name of your project. Suggestions is to use the name of your project in Platform,
 # which is also the name/slug of your repository on gitlab
-name: some-site
+name: admissions
 recipe: wordpress
 config:
     webroot: web
@@ -74,3 +74,7 @@ tooling:
 #        - site1.missouri.edu.lndo.site
 #        - site2.missouri.edu.lndo.site
 #        - site3.missouri.edu.lndo.site
+
+proxy:
+  appserver_nginx:
+    - admissions.colby.edu

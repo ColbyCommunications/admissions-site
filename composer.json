@@ -1,28 +1,34 @@
 {
-    "name": "mizzou/site-somesite.missouri.edu",
-    "description": "Configuration project for the site-somesite.missouri.edu site",
+    "name": "colby-communications/admissions.colby.edu",
+    "description": "Configuration project for the admissions.colby.edu site",
     "type": "project",
     "require": {
         "johnpbloch/wordpress-core-installer": "^1.0",
         "johnpbloch/wordpress-core": "^5.1.1",
         "wpackagist-theme/twentyseventeen": "^2.1",
         "wpackagist-plugin/classic-editor": "^1.4",
-        "wpackagist-plugin/super-simple-account-enumeration-blocker": "^1.0.0"
+        "wpackagist-plugin/super-simple-account-enumeration-blocker": "^1.0.0",
+        "colbycommunications/colby-afa-theme": "dev-dev",
+        "colbycommunications/colby-groups": "dev-dev"
     },
     "authors": [
         {
-            "name": "Truman Tiger",
-            "email": "trumant@missouri.edu"
+            "name": "Morty Mule",
+            "email": "bkwaltz@colby.edu"
         }
     ],
     "repositories": [
         {
             "type": "composer",
-            "url": "https://packages.missouri.edu/php/"
+            "url": "https://wpackagist.org/"
         },
         {
-            "type": "composer",
-            "url": "https://wpackagist.org/"
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-groups"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-afa-theme"
         }
     ],
     "extra": {
