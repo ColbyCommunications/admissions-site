@@ -9,7 +9,7 @@
         "wpackagist-plugin/classic-editor": "^1.4",
         "wpackagist-plugin/super-simple-account-enumeration-blocker": "^1.0.0",
         "colbycommunications/colby-afa-theme": "dev-dev",
-        "colbycommunications/colby-groups": "dev-dev",
+        "colbycommunications/colby-groups": "dev-feature/platform",
         "colbycollege/colby-lando": "dev-dev"
     },
     "authors": [
