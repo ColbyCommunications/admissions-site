@@ -1,2 +1,16 @@
 #!/usr/bin/env bash
+shopt -s extglob # Turns on extended globbing
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+NPM_DIRS=`ls web/wp-content/@(plugins|themes)/colby*/src/@(index.js|style.scss)` # Saves it to a variable
+for NPMDIR in $NPM_DIRS; do
+  NPMDIR=`dirname NPMDIR`
+  cd $NPMDIR
+  npm install
+  cd -
+done
+
+npm install
+shopt -u extglob
