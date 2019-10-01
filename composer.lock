@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d32d5426176eba84bdd8e0eabfe50f0",
+    "content-hash": "dfe1dec4eff9a0fa41408ff3fef7ba0d",
     "packages": [
         {
             "name": "colbycollege/colby-lando",
@@ -62,11 +62,20 @@
         },
         {
             "name": "colbycommunications/colby-groups",
-            "version": "dev-feature/platform",
+            "version": "dev-feature/wp5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-groups",
-                "reference": "e6ba49768ff5e345b1ddcebe4218924cc2971c9d"
+                "reference": "4394c1f6d5f0b4340e29299f578841700fc0d561"
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "automattic/vipwpcs": "^2.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "phpunit/phpunit": "^6.5",
+                "wp-coding-standards/wpcs": "^2.1"
             },
             "type": "wordpress-plugin",
             "autoload": {
@@ -84,11 +93,11 @@
                     "email": "brandon.waltz@colby.edu"
                 }
             ],
-            "description": "Colby user group management plugin ",
+            "description": "Colby user group management plugin",
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-09-23T20:21:27+00:00"
+            "time": "2019-09-24T23:16:44+00:00"
         },
         {
             "name": "composer/installers",
