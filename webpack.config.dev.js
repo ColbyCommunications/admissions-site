@@ -2,14 +2,14 @@ const path = require('path');
 const fs = require('fs');
 const glob = require('glob');
 const webpack = require('webpack');
-const _remove = require('lodash').remove;
-const _isEmpty = require('lodash').isEmpty;
+const _remove = require('lodash/remove');
+const _isEmpty = require('lodash/isEmpty');
 const _includes = require('lodash/includes');
 const autoprefixer = require('autoprefixer');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const WebpackNotifierPlugin = require('webpack-notifier');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const portFinderSync = require('portfinder-sync');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const portFinderSync = require('portfinder-sync');
 const isDevServer = process.argv.find(v => _includes(v, 'webpack-dev-server'));
 
 const currentDir = path.resolve(process.cwd());
@@ -49,8 +49,8 @@ const config = {
     },
     output: {
         path: currentDir + '/web/wp/build',
-        filename: '[name].bundle.js',
-        chunkFilename: '[id].[name].[chunkhash].bundle.js',
+        filename: 'app.[hash].bundle.js',
+        chunkFilename: '[id].app.[chunkhash].bundle.js',
     },
     stats: {
         all: false,
@@ -140,6 +140,17 @@ const config = {
                 fs.writeFileSync(jsFilename, jsBundleFilename);
                 if (!fileExists) {
                     fs.chmodSync(jsFilename, 0o777);
+                }
+
+                // Remove CSS bundle. We'll handle it from JS
+                const cssFilename = path.join(
+                    currentDir,
+                    'web',
+                    'build',
+                    'css.bundle.filename'
+                );
+                if (fs.existsSync(cssFilename)) {
+                    fs.unlinkSync(cssFilename);
                 }
             });
         },

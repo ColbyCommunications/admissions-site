@@ -15,10 +15,20 @@ set -e
 ###############################
 # If we're on a MULTISITE and not on the master branch
 if [ "$PLATFORM_BRANCH" != master ] && [ ! -z ${MULTISITE+x} ]; then
-  php scripts/digitalservice/update-multisite-db.php
+  php scriptsupdate-multisite-db.php
 fi
 # If the site is using the mizzoumvc framework, we'll need to reset the cache
 #./scripts/digitalservice/mizzoumvc-clear-cache.sh
+
+################################
+###          NODE           ###
+###############################
+unset NPM_CONFIG_PREFIX
+nvm use 10.16.3
+./scripts/npm-install-dependencies.sh
+
+# run webpack prod build
+npm run build
 
 
 ################################
