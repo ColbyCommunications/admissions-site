@@ -83,10 +83,11 @@ const config = {
                     {
                         loader: 'css-loader',
                         options: {
-                            context: currentDir,
-                            modules: true,
                             importLoaders: 2,
-                            localIdentName: '[name]__[local]__[hash:base64:5]',
+                            modules: {
+                                context: currentDir,
+                                localIdentName: '[local]__[hash:base64:5]',
+                            },
                         },
                     },
                     'sass-loader',
@@ -119,6 +120,7 @@ const config = {
                     all: false,
                     assets: true,
                 }).assetsByChunkName.app;
+
                 if (typeof jsBundleFilename !== 'string') {
                     jsBundleFilename = jsBundleFilename[0];
                 }

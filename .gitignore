@@ -4,6 +4,9 @@
 #ignore node_modules
 /node_modules
 
+#ignore temp build files
+/web/build/
+
 #ignore core wordpress files installed by composer
 /web/wp/
 #ignore Everything in wp-content (plugins,themes,etc.) installed by composer

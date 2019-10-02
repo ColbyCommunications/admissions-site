@@ -59,15 +59,6 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.less$/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    { loader: 'css-loader', options: { minimize: true } },
-                    postcssLoader,
-                    'less-loader',
-                ],
-            },
-            {
                 test: /\.(jpg|png|gif|svg)$/,
                 use: {
                     loader: 'url-loader',
@@ -102,11 +93,11 @@ const config = {
                     {
                         loader: 'css-loader',
                         options: {
-                            context: currentDir,
-                            modules: true,
                             importLoaders: 2,
-                            localIdentName: '[local]__[hash:base64:5]',
-                            minimize: true,
+                            modules: {
+                                context: currentDir,
+                                localIdentName: '[local]__[hash:base64:5]',
+                            },
                         },
                     },
                     postcssLoader,
@@ -133,13 +124,16 @@ const config = {
             this.plugin('done', stats => {
                 const chunks = stats.toJson({ all: false, assets: true })
                     .assetsByChunkName.app;
-                const jsBundleFilename = chunks.find(file =>
+                let jsBundleFilename = chunks.find(file =>
                     /^app.*\.js$/.test(file)
                 );
 
-                const cssBundleFilename = chunks.find(file =>
+                let cssBundleFilename = chunks.find(file =>
                     /^app.*\.css$/.test(file)
                 );
+
+                cssBundleFilename = '/build/' + cssBundleFilename;
+                jsBundleFilename = '/build/' + jsBundleFilename;
 
                 // Write js bundle
                 (() => {
