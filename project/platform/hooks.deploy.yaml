@@ -21,19 +21,6 @@ fi
 #./scripts/digitalservice/mizzoumvc-clear-cache.sh
 
 ################################
-###          NODE           ###
-###############################
-unset NPM_CONFIG_PREFIX
-nvm use 10.16.3
-
-# run npm install in all colby dependencies
-./scripts/npm-install-dependencies.sh
-
-# run webpack prod build
-npm run build
-
-
-################################
 ###     Project Specific    ###
 ###############################
 # Add any additional project specific deploy hooks you need in the environment after this line

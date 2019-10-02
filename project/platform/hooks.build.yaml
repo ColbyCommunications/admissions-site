@@ -25,6 +25,16 @@ export NVM_DIR="$HOME/.nvm"
 nvm current
 nvm install 10.16.3
 
+
+unset NPM_CONFIG_PREFIX
+nvm use 10.16.3
+
+# run npm install in all colby dependencies
+./scripts/npm-install-dependencies.sh
+
+# run webpack prod build
+npm run build
+
 ################################
 ###     Project Specific    ###
 ###############################
