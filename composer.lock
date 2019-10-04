@@ -4,8 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfe1dec4eff9a0fa41408ff3fef7ba0d",
+    "content-hash": "f43aa25307ef4c60786008e3bcb19ba5",
     "packages": [
+        {
+            "name": "colbycollege/colby-base-theme",
+            "version": "dev-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ColbyCommunications/colby-base-theme",
+                "reference": "583a2abf0adc3ea4b06404451ad9f17e0d5fbc5a"
+            },
+            "type": "wordpress-theme",
+            "authors": [
+                {
+                    "name": "Brandon Waltz",
+                    "email": "brandon.waltz@colby.edu"
+                }
+            ],
+            "description": "Colby's base theme",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2019-10-03T19:20:17+00:00"
+        },
         {
             "name": "colbycollege/colby-lando",
             "version": "dev-dev",
@@ -33,7 +54,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-afa-theme",
-                "reference": "4e0c475a8dd94937f2e0876ab5cb8a129475ca10"
+                "reference": "49dc6ae8ca1c1c26c91fa110184566f8b803060c"
             },
             "require": {
                 "frozzare/wp-autoload": "^2.0"
@@ -58,7 +79,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-09-18T10:32:31+00:00"
+            "time": "2019-10-04T14:40:10+00:00"
         },
         {
             "name": "colbycommunications/colby-groups",
@@ -66,7 +87,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-groups",
-                "reference": "4394c1f6d5f0b4340e29299f578841700fc0d561"
+                "reference": "aba1d2c5d3e6d5a80464a341f2129bdfe725ed05"
             },
             "require": {
                 "php": ">=7.0"
@@ -97,7 +118,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-09-24T23:16:44+00:00"
+            "time": "2019-10-04T18:31:51+00:00"
         },
         {
             "name": "composer/installers",
@@ -415,7 +436,8 @@
     "stability-flags": {
         "colbycommunications/colby-afa-theme": 20,
         "colbycommunications/colby-groups": 20,
-        "colbycollege/colby-lando": 20
+        "colbycollege/colby-lando": 20,
+        "colbycollege/colby-base-theme": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
