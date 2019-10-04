@@ -10,7 +10,8 @@
         "wpackagist-plugin/super-simple-account-enumeration-blocker": "^1.0.0",
         "colbycommunications/colby-afa-theme": "dev-dev",
         "colbycommunications/colby-groups": "dev-feature/wp5",
-        "colbycollege/colby-lando": "dev-dev"
+        "colbycollege/colby-lando": "dev-dev",
+        "colbycollege/colby-base-theme": "dev-dev"
     },
     "authors": [
         {
@@ -34,6 +35,10 @@
         {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/colby-lando"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-base-theme"
         }
     ],
     "extra": {
