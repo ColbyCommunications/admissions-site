@@ -87,7 +87,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-groups",
-                "reference": "aba1d2c5d3e6d5a80464a341f2129bdfe725ed05"
+                "reference": "94ba6b175abaf5c43be5e6498b04cf91cf2c4f3a"
             },
             "require": {
                 "php": ">=7.0"
@@ -118,7 +118,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-10-04T18:31:51+00:00"
+            "time": "2019-10-04T20:44:19+00:00"
         },
         {
             "name": "composer/installers",
