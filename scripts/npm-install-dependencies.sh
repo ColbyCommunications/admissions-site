@@ -12,10 +12,14 @@ for NPMDIR in $NPM_DIRS; do
   NPMDIR=`dirname $NPMDIR`
   NPMDIR_PRUNED=${NPMDIR:0:$((${#NPMDIR}-3))}
   cd $NPMDIR_PRUNED
-  printf "Installing NPM dependenies for ${NPMDIR_PRUNED}... \n"
+  printf "Installing NPM dependencies for ${NPMDIR_PRUNED}... \n"
   npm install
   cd -
 done
 
+# install npm dependencies in the app root
+npm install
+
 # npm install
 shopt -u extglob
+
