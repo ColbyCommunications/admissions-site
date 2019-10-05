@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-base-theme",
-                "reference": "583a2abf0adc3ea4b06404451ad9f17e0d5fbc5a"
+                "reference": "edc44d7eb7a3cea9394e89b153d9a15c5b9ce0bd"
             },
             "type": "wordpress-theme",
             "authors": [
@@ -25,7 +25,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-10-03T19:20:17+00:00"
+            "time": "2019-10-05T19:37:25+00:00"
         },
         {
             "name": "colbycollege/colby-lando",
