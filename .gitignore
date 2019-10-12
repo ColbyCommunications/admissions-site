@@ -48,8 +48,8 @@
 /npm-packages
 
 # Ignore sql files
-*.sql
-*.sql.gz
+#*.sql
+#*.sql.gz
 
 # Ignore simplesaml dir locally
 /simplesaml
