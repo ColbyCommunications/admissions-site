@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f43aa25307ef4c60786008e3bcb19ba5",
+    "content-hash": "bc1cc8d364f85acd24a61e3734e67b40",
     "packages": [
         {
             "name": "colbycollege/colby-base-theme",
@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-base-theme",
-                "reference": "583a2abf0adc3ea4b06404451ad9f17e0d5fbc5a"
+                "reference": "bc28a275fd90ffabccd24ed08a309e525c59fe2e"
             },
             "type": "wordpress-theme",
             "authors": [
@@ -25,7 +25,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-10-03T19:20:17+00:00"
+            "time": "2019-10-05T19:57:00+00:00"
         },
         {
             "name": "colbycollege/colby-lando",
@@ -83,11 +83,11 @@
         },
         {
             "name": "colbycommunications/colby-groups",
-            "version": "dev-feature/wp5",
+            "version": "dev-build-process",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-groups",
-                "reference": "a5dd116c0d6d7efb0e7b957ea9c2f1fc2da245e7"
+                "reference": "8deade9d8c24bef48776a64c3857a64b0beed666"
             },
             "require": {
                 "php": ">=7.0"
@@ -118,7 +118,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-10-04T21:03:19+00:00"
+            "time": "2019-10-10T15:21:25+00:00"
         },
         {
             "name": "composer/installers",
