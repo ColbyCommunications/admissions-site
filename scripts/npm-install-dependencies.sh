@@ -7,7 +7,7 @@ shopt -s extglob # Turns on extended globbing
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-NPM_DIRS=`ls web/wp-content/@(plugins|themes)/colby-*/src/@(index.js|style.scss)` # Saves it to a variable
+NPM_DIRS=`ls web/wp-content/@(plugins|themes)/colby-*/src/@(index.js)` # Saves it to a variable
 for NPMDIR in $NPM_DIRS; do
   NPMDIR=`dirname $NPMDIR`
   NPMDIR_PRUNED=${NPMDIR:0:$((${#NPMDIR}-3))}

@@ -8,7 +8,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 NPM_DIRS=`ls web/wp-content/@(plugins|themes)/colby-*/src/@(index.js)` # Saves it to a variable
-echo $NPM_DIRS
 for NPMDIR in $NPM_DIRS; do
   NPMDIR=`dirname $NPMDIR`
   NPMDIR_PRUNED=${NPMDIR:0:$((${#NPMDIR}-3))}
@@ -23,4 +22,4 @@ npm install
 
 # npm install
 shopt -u extglob
-$
+
