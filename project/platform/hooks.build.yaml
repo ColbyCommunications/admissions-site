@@ -31,7 +31,7 @@ nvm use 10.16.3
 
 # run npm install in all colby dependencies
 ./scripts/npm-install-dependencies.sh
-./scripts/dependencies-run-build.sh
+#./scripts/dependencies-run-build.sh
 
 ################################
 ###     Project Specific    ###
