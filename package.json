@@ -1,9 +1,5 @@
 {
     "private": true,
-    "scripts": {
-        "start": "webpack-dev-server --port=9000 --config webpack.config.dev.js",
-        "build": "webpack --config webpack.config.prod.js"
-    },
     "devDependencies": {
         "autoprefixer": "^9.6.1",
         "babel-loader": "^8.0.6",

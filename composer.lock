@@ -12,7 +12,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-base-theme",
-                "reference": "0f1b2c53a71987feb6ec452a34753ee1dbaba5f7"
+                "reference": "4e31e909cc6856b13eaa0d39635fb8573eb51ac4"
             },
             "type": "wordpress-theme",
             "authors": [
@@ -25,7 +25,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-10-28T01:26:05+00:00"
+            "time": "2019-10-28T18:02:47+00:00"
         },
         {
             "name": "colbycollege/colby-lando",
@@ -87,7 +87,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-groups",
-                "reference": "ddc1fbd38c843d558561b68031256e962fd3f3b5"
+                "reference": "052847185832a411dd357bef40ed801f779d7531"
             },
             "require": {
                 "php": ">=7.0"
@@ -118,7 +118,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2019-10-28T01:04:31+00:00"
+            "time": "2019-11-04T15:41:18+00:00"
         },
         {
             "name": "composer/installers",
