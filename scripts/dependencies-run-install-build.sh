@@ -12,6 +12,8 @@ for NPMDIR in $NPM_DIRS; do
   NPMDIR=`dirname $NPMDIR`
   NPMDIR_PRUNED=${NPMDIR:0:$((${#NPMDIR}-3))}
   cd $NPMDIR_PRUNED
+  printf "Installing NPM dependencies for ${NPMDIR_PRUNED}... \n"
+  npm install
   printf "Running build for ${NPMDIR_PRUNED}... \n"
   npm run build
   cd -
