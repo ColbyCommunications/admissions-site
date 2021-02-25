@@ -22,7 +22,11 @@
         "wpackagist-plugin/adminimize": "^1.11",
         "wpackagist-plugin/ultimate-dashboard": "^3.1",
         "newcity/newcity-wp-wysiwyg": "^v0.2.4",
-        "colbycommunications/colby-base-theme": "dev-master"
+        "colbycommunications/colby-base-theme": "dev-master",
+        "wpackagist-plugin/wordpress-seo": "^13.3",
+        "wpackagist-plugin/cloudflare": "^3.4.1",
+        "devgeniem/wp-redis-object-cache-dropin": "^1.6",
+        "wpackagist-plugin/cache-control": "^2.2.3"
     },
     "authors": [
         {
