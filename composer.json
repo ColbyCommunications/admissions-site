@@ -1,28 +1,30 @@
 {
-    "name": "colby-college/some-site",
-    "description": "Configuration project for the some-site.colby.edu site",
+    "name": "colby-college/admissions",
+    "description": "Configuration project for the admissions.colby.edu site",
     "type": "project",
     "require": {
-        "johnpbloch/wordpress-core-installer": "^1.0",
-        "johnpbloch/wordpress-core": "^5.1.1",
+        "johnpbloch/wordpress-core-installer": "^2.0",
+        "johnpbloch/wordpress": "^5.6",
         "wpackagist-theme/twentyseventeen": "^2.1",
-        "wpackagist-plugin/classic-editor": "^1.4",
-        "wpackagist-plugin/elementor": "^2.9.0",
-        "colbycommunications/colby-groups": "dev-wp4-test",
-        "wpackagist-plugin/capability-manager-enhanced": "1.9",
-        "wpackagist-plugin/tablepress": "^1.10",
-        "wpackagist-theme/hello-elementor": "^2.2.2",
-        "wpackagist-plugin/header-footer": "^3.1.3",
-        "wpackagist-plugin/duplicate-post": "^3.2.4",
-        "wpackagist-plugin/wordpress-seo": "^13.3",
-        "wpackagist-plugin/cloudflare": "^3.4.1",
-        "devgeniem/wp-redis-object-cache-dropin": "^1.6",
-        "wpackagist-plugin/cache-control": "^2.2.3",
+        "wpackagist-plugin/wordpress-importer": "^0.7.0",
+        "wpackagist-plugin/theme-check": "20200731.1",
+        "wpackagist-plugin/query-monitor": "^3.6",
+        "wpackagist-plugin/log-deprecated-notices": "^0.4.1",
+        "wpackagist-plugin/monster-widget": "^0.3.0",
+        "wpackagist-plugin/wordpress-beta-tester": "^2.2",
+        "wpackagist-plugin/regenerate-thumbnails": "^3.1",
+        "wpackagist-plugin/admin-bar-in-fullscreen-mode": "^1.0",
+        "wpackagist-plugin/svg-support": "^2.3",
+        "wpackagist-plugin/acf-extended": "0.8.7.6",
+        "wpackagist-plugin/accordion-blocks": "^1.3",
+        "wpackagist-plugin/acf-autosize": "^2.0",
+        "ahebrank/wp-frontback": "dev-master",
+        "wpackagist-plugin/adminimize": "^1.11",
+        "wpackagist-plugin/ultimate-dashboard": "^3.1",
+        "newcity/newcity-wp-wysiwyg": "^v0.2.4",
         "colbycommunications/colby-base-theme": "dev-master",
-        "wpackagist-plugin/public-post-preview": "^2.9.1",
-        "wp-graphql/wp-graphql": "^0.12.1",
-        "wp-graphql/wp-graphiql": "^1.0",
-        "pristas-peter/wp-graphql-gutenberg": "^0.3.4"
+        "colbycommunications/colby-admissions-theme": "dev-master"
+
     },
     "authors": [
         {
@@ -34,6 +36,14 @@
         {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/colby-base-theme"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-admissions-theme"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ahebrank/frontback"
         },
         {
             "type": "git",
@@ -59,5 +69,20 @@
                 "type:wordpress-theme"
             ]
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf wp-content/plugins/ahebrank/.git"
+        ]
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "paulgibbs/behat-wordpress-extension": "^3.3",
+        "behat/mink-extension": "^2.3",
+        "behat/mink-goutte-driver": "^1.2",
+        "dmore/behat-chrome-extension": "^1.3"
     }
+
 }
