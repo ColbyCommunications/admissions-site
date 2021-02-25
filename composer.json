@@ -22,9 +22,7 @@
         "wpackagist-plugin/adminimize": "^1.11",
         "wpackagist-plugin/ultimate-dashboard": "^3.1",
         "newcity/newcity-wp-wysiwyg": "^v0.2.4",
-        "colbycommunications/colby-base-theme": "dev-master",
-        "colbycommunications/colby-admissions-theme": "dev-master"
-
+        "colbycommunications/colby-base-theme": "dev-master"
     },
     "authors": [
         {
@@ -36,14 +34,6 @@
         {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/colby-base-theme"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/ColbyCommunications/colby-admissions-theme"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/ahebrank/frontback"
         },
         {
             "type": "git",
