@@ -9,6 +9,7 @@
         "devgeniem/wp-redis-object-cache-dropin": "^1.6",
         "colbycommunications/colby-base-theme": "dev-master",
         "colbycommunications/colby-admissions-theme": "dev-master",
+        "newcity/newcity-wp-wysiwyg": "^v0.2.4",
         "wpackagist-theme/twentyseventeen": "^2.1",
         "wpackagist-plugin/wordpress-importer": "^0.7.0",
         "wpackagist-plugin/query-monitor": "^3.6",
@@ -24,7 +25,6 @@
         "wpackagist-plugin/svg-support": "^2.3",
         "wpackagist-plugin/wordpress-seo": "^13.3",
         "wpackagist-plugin/ultimate-dashboard": "^3.1",
-        "newcity/newcity-wp-wysiwyg": "^v0.2.4",
         "wp-graphql/wp-graphql": "^0.12.1",
         "wp-graphql/wp-graphiql": "^1.0",
         "pristas-peter/wp-graphql-gutenberg": "^0.3.4"
