@@ -9,6 +9,7 @@
         "devgeniem/wp-redis-object-cache-dropin": "^1.6",
         "colbycommunications/colby-base-theme": "dev-master",
         "colbycommunications/colby-admissions-theme": "dev-master",
+        "colbycommunications/colby-counselors": "dev-develop",
         "newcity/newcity-wp-wysiwyg": "^v0.2.4",
         "wpackagist-theme/twentyseventeen": "^2.1",
         "wpackagist-plugin/wordpress-importer": "^0.7.0",
@@ -48,6 +49,10 @@
         {
             "type": "git",
             "url": "https://github.com/ColbyCommunications/colby-groups"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/ColbyCommunications/colby-counselors"
         },
         {
             "type": "composer",
