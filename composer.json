@@ -22,6 +22,7 @@
         "wpackagist-plugin/cache-control": "^2.2.3",
         "wpackagist-plugin/cloudflare": "^3.4.1",
         "wpackagist-plugin/disable-comments": "^2.1",
+        "wpackagist-plugin/duplicate-post": "^4.1.1",
         "wpackagist-plugin/wp-nested-pages": "^3.1.13",
         "wpackagist-plugin/public-post-preview": "^2.9.1",
         "wpackagist-plugin/regenerate-thumbnails": "^3.1",
