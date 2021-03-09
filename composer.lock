@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33a9e7bceb61fa23b5290e425caa3398",
+    "content-hash": "b47f747be58214a50bf0f2c8b4d087e0",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -195,7 +195,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ColbyCommunications/colby-admissions-theme",
+                "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
                 "reference": "74684ea3e0d1dbae716dc1cfaac9978ab0cef60f"
             },
             "require": {
