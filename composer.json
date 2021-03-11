@@ -29,8 +29,7 @@
         "wpackagist-plugin/svg-support": "^2.3",
         "wpackagist-plugin/wordpress-seo": "^13.3",
         "wpackagist-plugin/ultimate-dashboard": "^3.1",
-        "wp-graphql/wp-graphql": "^0.12.1",
-        "wp-graphql/wp-graphiql": "^1.0",
+        "wp-graphql/wp-graphql": "^1.2.5",
         "pristas-peter/wp-graphql-gutenberg": "^0.3.4"
     },
     "authors": [
