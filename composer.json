@@ -16,7 +16,7 @@
         "wpackagist-plugin/query-monitor": "^3.6",
         "wpackagist-plugin/accordion-blocks": "^1.3",
         "wpackagist-plugin/acf-autosize": "^2.0",
-        "wpackagist-plugin/acf-extended": "0.8.7.6",
+        "wpackagist-plugin/acf-extended": "^0.8.7.6",
         "wpackagist-plugin/admin-bar-in-fullscreen-mode": "^1.0",
         "wpackagist-plugin/adminimize": "^1.11",
         "wpackagist-plugin/cache-control": "^2.2.3",

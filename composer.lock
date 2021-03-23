@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "507bd6d8574d3c99c624dc6a2a9de225",
+    "content-hash": "ff439db4125991290accb38548fa747d",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -196,7 +196,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "42fdc8fb01e8628cda264d815ce933ab878bebf1"
+                "reference": "5d34a4856cd65bda9c6f41772b634fc1559d91f5"
             },
             "require": {
                 "masterminds/html5": "^2.7",
@@ -219,7 +219,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2021-03-18T18:45:45+00:00"
+            "time": "2021-03-23T21:47:07+00:00"
         },
         {
             "name": "colbycommunications/colby-base-theme",
@@ -2635,16 +2635,16 @@
         },
         {
             "name": "wp-graphql/wp-graphql",
-            "version": "v1.2.5",
+            "version": "v1.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-graphql/wp-graphql.git",
-                "reference": "1a615270266eee2b153570d9f319420e96fc0c7f"
+                "reference": "cc0b383259383898c3a1bebe65adf1140290b37e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/1a615270266eee2b153570d9f319420e96fc0c7f",
-                "reference": "1a615270266eee2b153570d9f319420e96fc0c7f",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/cc0b383259383898c3a1bebe65adf1140290b37e",
+                "reference": "cc0b383259383898c3a1bebe65adf1140290b37e",
                 "shasum": ""
             },
             "require": {
@@ -2653,6 +2653,7 @@
                 "webonyx/graphql-php": "14.4.0"
             },
             "require-dev": {
+                "automattic/vipwpcs": "^2.2",
                 "codeception/module-asserts": "^1.0",
                 "codeception/module-cli": "^1.0",
                 "codeception/module-db": "^1.0",
@@ -2663,14 +2664,14 @@
                 "codeception/util-universalframework": "^1.0",
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "lucatume/wp-browser": "^2.4",
-                "phpcompatibility/phpcompatibility-wp": "2.1.0",
+                "phpcompatibility/phpcompatibility-wp": "^2.1.0",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^0.12.64",
                 "phpunit/phpunit": "9.4.1",
                 "simpod/php-coveralls-mirror": "^3.0",
-                "squizlabs/php_codesniffer": "3.5.4",
+                "squizlabs/php_codesniffer": "^3.5.7",
                 "szepeviktor/phpstan-wordpress": "^0.7.1",
-                "wp-coding-standards/wpcs": "2.1.1",
+                "wp-coding-standards/wpcs": "^2.3",
                 "wp-graphql/wp-graphql-testcase": "^1.0"
             },
             "type": "wordpress-plugin",
@@ -2707,7 +2708,7 @@
                 }
             ],
             "description": "GraphQL API for WordPress",
-            "time": "2021-03-01T19:03:08+00:00"
+            "time": "2021-03-23T19:24:56+00:00"
         },
         {
             "name": "wpackagist-plugin/accordion-blocks",
@@ -2747,15 +2748,15 @@
         },
         {
             "name": "wpackagist-plugin/acf-extended",
-            "version": "0.8.7.6",
+            "version": "0.8.8",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/acf-extended/",
-                "reference": "tags/0.8.7.6"
+                "reference": "tags/0.8.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-extended.0.8.7.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/acf-extended.0.8.8.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2855,15 +2856,15 @@
         },
         {
             "name": "wpackagist-plugin/duplicate-post",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/duplicate-post/",
-                "reference": "tags/4.1.1"
+                "reference": "tags/4.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duplicate-post.4.1.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.4.1.2.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -2873,15 +2874,15 @@
         },
         {
             "name": "wpackagist-plugin/public-post-preview",
-            "version": "2.9.2",
+            "version": "2.9.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/public-post-preview/",
-                "reference": "tags/2.9.2"
+                "reference": "tags/2.9.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/public-post-preview.2.9.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/public-post-preview.2.9.3.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
