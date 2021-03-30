@@ -26,6 +26,7 @@
         "wpackagist-plugin/wp-nested-pages": "^3.1.13",
         "wpackagist-plugin/public-post-preview": "^2.9.1",
         "wpackagist-plugin/regenerate-thumbnails": "^3.1",
+        "wpackagist-plugin/simple-history": "^2.41",
         "wpackagist-plugin/svg-support": "^2.3",
         "wpackagist-plugin/wordpress-seo": "^13.3",
         "wpackagist-plugin/ultimate-dashboard": "^3.1",
