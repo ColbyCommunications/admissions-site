@@ -65,6 +65,11 @@ tooling:
     description: Platform CLI passthru
     cmd: "platform"
 
+  themeupdate:
+    service: appserver
+    description: Update the composer dependency for the Colby Admissions WordPress theme
+    cmd: "composer update colbycommunications/colby-admissions-theme"
+
 # If you are setting up a WordPress multisite, you will need to uncomment the next few lines.  For each domain in your
 # multisite, you will need them in the list.
 # proxy:
