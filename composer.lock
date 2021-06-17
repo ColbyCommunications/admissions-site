@@ -196,7 +196,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "24e07792c962ffc6f17a4a545a29d318993475d2"
+                "reference": "626a2f44dc795bc2ca7c56fa9394b784dfa93046"
             },
             "require": {
                 "masterminds/html5": "^2.7",
@@ -219,7 +219,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2021-06-03T18:12:05+00:00"
+            "time": "2021-06-10T18:56:19+00:00"
         },
         {
             "name": "colbycommunications/colby-base-theme",
