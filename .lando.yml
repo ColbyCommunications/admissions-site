@@ -1,6 +1,6 @@
 # Change the name property to the name of your project. Suggestions is to use the name of your project in Platform,
 # which is also the name/slug of your repository on gitlab
-name: some-site
+name: colby-admissions-production
 recipe: wordpress
 config:
     webroot: web
@@ -13,11 +13,13 @@ env_file:
 services:
   appserver:
     type: php:7.2
+    composer_version: 2
     build:
         # Intall the platform.sh CLI and make sure it is up to date.
         - "./scripts/lando-platform-install.sh"
     run:
         - "platform self-update -y"
+        - "composer self-update"
         # 'w' to let it know we're dealing with WordPress
         - "./scripts/lando-run.sh n w"
         - "./scripts/setup-mu-plugins.sh"
