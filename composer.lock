@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "57113bd7b1c2b96bccbbdbf41326779e",
+    "content-hash": "c270b2f07c49b5087bc3f76007d18b25",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -209,17 +209,16 @@
         },
         {
             "name": "colbycommunications/colby-admissions-theme",
-            "version": "dev-master",
+            "version": "dev-counselor-test",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "fb8481af35d25a2b3fa246ae317d9838d51d4b09"
+                "reference": "c323c2b7b925ea94e09da4ffef91837349de1701"
             },
             "require": {
                 "masterminds/html5": "^2.7",
                 "timber/timber": "^1.18"
             },
-            "default-branch": true,
             "type": "wordpress-theme",
             "scripts": {
                 "post-update-cmd": [
@@ -237,7 +236,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2021-08-04T16:35:50+00:00"
+            "time": "2021-08-13T18:12:27+00:00"
         },
         {
             "name": "colbycommunications/colby-base-theme",
@@ -2822,16 +2821,16 @@
         },
         {
             "name": "wp-graphql/wp-graphql",
-            "version": "v1.6.2",
+            "version": "v1.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-graphql/wp-graphql.git",
-                "reference": "43a86e1a59ef044c6dd5870cb60534474872a33b"
+                "reference": "0068cb66cdb3ad2fe35223862e4b57914f15d01c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/43a86e1a59ef044c6dd5870cb60534474872a33b",
-                "reference": "43a86e1a59ef044c6dd5870cb60534474872a33b",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/0068cb66cdb3ad2fe35223862e4b57914f15d01c",
+                "reference": "0068cb66cdb3ad2fe35223862e4b57914f15d01c",
                 "shasum": ""
             },
             "require": {
@@ -2897,9 +2896,9 @@
             "description": "GraphQL API for WordPress",
             "support": {
                 "issues": "https://github.com/wp-graphql/wp-graphql/issues",
-                "source": "https://github.com/wp-graphql/wp-graphql/tree/v1.6.2"
+                "source": "https://github.com/wp-graphql/wp-graphql/tree/v1.6.3"
             },
-            "time": "2021-08-04T17:16:54+00:00"
+            "time": "2021-08-13T17:22:35+00:00"
         },
         {
             "name": "wpackagist-plugin/accordion-blocks",
