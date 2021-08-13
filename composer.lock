@@ -213,7 +213,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "8b52045cfeb2208e05a7a944db23c702d0da6ad2"
+                "reference": "fb8481af35d25a2b3fa246ae317d9838d51d4b09"
             },
             "require": {
                 "masterminds/html5": "^2.7",
@@ -237,7 +237,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2021-08-04T13:00:59+00:00"
+            "time": "2021-08-04T16:35:50+00:00"
         },
         {
             "name": "colbycommunications/colby-base-theme",
@@ -294,7 +294,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
-                "reference": "702c697a2098d43d61ea817a319a167952422b18"
+                "reference": "9f46df3dd8f8adc7c9befa6be1a5ee8d1c5162b2"
             },
             "require": {
                 "johnwatkins0/wp-autoload": "^1.0",
@@ -312,7 +312,7 @@
                     "phpcs"
                 ]
             },
-            "time": "2021-07-21T20:08:55+00:00"
+            "time": "2021-08-13T15:31:00+00:00"
         },
         {
             "name": "composer/installers",
@@ -1566,16 +1566,16 @@
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
-            "version": "v0.3.8",
+            "version": "v0.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
-                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7"
+                "reference": "ef6db567f6a9e6c54beed797c4e16921925633f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/2f35359fd306fff98dcb25063735e9b584a625f7",
-                "reference": "2f35359fd306fff98dcb25063735e9b584a625f7",
+                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/ef6db567f6a9e6c54beed797c4e16921925633f1",
+                "reference": "ef6db567f6a9e6c54beed797c4e16921925633f1",
                 "shasum": ""
             },
             "require": {
@@ -1601,9 +1601,9 @@
             "description": "Query gutenberg blocks with wp-graphql",
             "support": {
                 "issues": "https://github.com/pristas-peter/wp-graphql-gutenberg/issues",
-                "source": "https://github.com/pristas-peter/wp-graphql-gutenberg/tree/v0.3.8"
+                "source": "https://github.com/pristas-peter/wp-graphql-gutenberg/tree/v0.3.10"
             },
-            "time": "2021-03-05T09:39:59+00:00"
+            "time": "2021-08-06T22:18:20+00:00"
         },
         {
             "name": "psr/container",
@@ -2822,16 +2822,16 @@
         },
         {
             "name": "wp-graphql/wp-graphql",
-            "version": "v1.6.1",
+            "version": "v1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-graphql/wp-graphql.git",
-                "reference": "fefb2d57ffbca6c4f92f3ba80e8c2d5b13769e1d"
+                "reference": "43a86e1a59ef044c6dd5870cb60534474872a33b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/fefb2d57ffbca6c4f92f3ba80e8c2d5b13769e1d",
-                "reference": "fefb2d57ffbca6c4f92f3ba80e8c2d5b13769e1d",
+                "url": "https://api.github.com/repos/wp-graphql/wp-graphql/zipball/43a86e1a59ef044c6dd5870cb60534474872a33b",
+                "reference": "43a86e1a59ef044c6dd5870cb60534474872a33b",
                 "shasum": ""
             },
             "require": {
@@ -2897,9 +2897,9 @@
             "description": "GraphQL API for WordPress",
             "support": {
                 "issues": "https://github.com/wp-graphql/wp-graphql/issues",
-                "source": "https://github.com/wp-graphql/wp-graphql/tree/v1.6.1"
+                "source": "https://github.com/wp-graphql/wp-graphql/tree/v1.6.2"
             },
-            "time": "2021-07-30T19:36:20+00:00"
+            "time": "2021-08-04T17:16:54+00:00"
         },
         {
             "name": "wpackagist-plugin/accordion-blocks",
@@ -3227,15 +3227,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "16.8",
+            "version": "16.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/16.8"
+                "reference": "tags/16.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.16.9.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
