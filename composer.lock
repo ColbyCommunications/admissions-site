@@ -293,7 +293,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
-                "reference": "9f46df3dd8f8adc7c9befa6be1a5ee8d1c5162b2"
+                "reference": "c6b4f7e9df3a0add5754dab1096d8e149555338d"
             },
             "require": {
                 "johnwatkins0/wp-autoload": "^1.0",
@@ -311,7 +311,7 @@
                     "phpcs"
                 ]
             },
-            "time": "2021-08-13T15:31:00+00:00"
+            "time": "2021-08-17T13:42:43+00:00"
         },
         {
             "name": "composer/installers",
@@ -1565,16 +1565,16 @@
         },
         {
             "name": "pristas-peter/wp-graphql-gutenberg",
-            "version": "v0.3.10",
+            "version": "v0.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pristas-peter/wp-graphql-gutenberg.git",
-                "reference": "ef6db567f6a9e6c54beed797c4e16921925633f1"
+                "reference": "7b2d4ca0590d2587c23b75ddb30027b44c0a80d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/ef6db567f6a9e6c54beed797c4e16921925633f1",
-                "reference": "ef6db567f6a9e6c54beed797c4e16921925633f1",
+                "url": "https://api.github.com/repos/pristas-peter/wp-graphql-gutenberg/zipball/7b2d4ca0590d2587c23b75ddb30027b44c0a80d4",
+                "reference": "7b2d4ca0590d2587c23b75ddb30027b44c0a80d4",
                 "shasum": ""
             },
             "require": {
@@ -1600,9 +1600,9 @@
             "description": "Query gutenberg blocks with wp-graphql",
             "support": {
                 "issues": "https://github.com/pristas-peter/wp-graphql-gutenberg/issues",
-                "source": "https://github.com/pristas-peter/wp-graphql-gutenberg/tree/v0.3.10"
+                "source": "https://github.com/pristas-peter/wp-graphql-gutenberg/tree/v0.3.11"
             },
-            "time": "2021-08-06T22:18:20+00:00"
+            "time": "2021-08-16T13:38:20+00:00"
         },
         {
             "name": "psr/container",
@@ -3244,15 +3244,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-nested-pages",
-            "version": "3.1.15",
+            "version": "3.1.16",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-nested-pages/",
-                "reference": "tags/3.1.15"
+                "reference": "tags/3.1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.1.15.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.1.16.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
