@@ -234,7 +234,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
-                "reference": "acbd7d15ac55ad2a876db8f71a2fe2594dbb47b0"
+                "reference": "657ec4f656343e037d8568f66b6b6397a3dca61b"
             },
             "require": {
                 "johnwatkins0/wp-autoload": "^1.0",
@@ -252,7 +252,7 @@
                     "phpcs"
                 ]
             },
-            "time": "2021-09-20T16:26:30+00:00"
+            "time": "2021-09-20T17:53:39+00:00"
         },
         {
             "name": "composer/installers",
