@@ -8,23 +8,31 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # base-install
-cd web/wp-content/themes/baseinstall
+# cd web/wp-content/themes/baseinstall
+# npm install
+# gulp
+# cd -
+
+cd web/wp-content/plugins/colby-counselors
+composer install
+composer dump-autoload
 npm install
-gulp
+npm run production
 cd -
 
-printf "Plugins... \n"
-NPM_PLUGIN_DIRS=`ls web/wp-content/plugins/colby-*/src/@(index.js)` # Saves it to a variable
-for NPMPLUGINDIR in $NPM_PLUGIN_DIRS; do
-  NPMPLUGINDIR=`dirname $NPMPLUGINDIR`
-  NPMPLUGINDIR_PRUNED=${NPMPLUGINDIR:0:$((${#NPMPLUGINDIR}-3))}
-  cd $NPMPLUGINDIR_PRUNED
-  printf "Installing NPM dependencies for ${NPMPLUGINDIR_PRUNED}... \n"
-  npm install
-  printf "Running build for ${NPMPLUGINDIR_PRUNED}... \n"
-  npm run build
-  cd -
-done
+
+# printf "Plugins... \n"
+# NPM_PLUGIN_DIRS=`ls web/wp-content/plugins/colby-*/src/@(index.js)` # Saves it to a variable
+# for NPMPLUGINDIR in $NPM_PLUGIN_DIRS; do
+#   NPMPLUGINDIR=`dirname $NPMPLUGINDIR`
+#   NPMPLUGINDIR_PRUNED=${NPMPLUGINDIR:0:$((${#NPMPLUGINDIR}-3))}
+#   cd $NPMPLUGINDIR_PRUNED
+#   printf "Installing NPM dependencies for ${NPMPLUGINDIR_PRUNED}... \n"
+#   npm install
+#   printf "Running build for ${NPMPLUGINDIR_PRUNED}... \n"
+#   npm run build
+#   cd -
+# done
 
 
 printf "Sage Themes... \n"
