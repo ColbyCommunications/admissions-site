@@ -141,12 +141,13 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "b9e12fef80be7a5be9a2e4d5ac9758da97ef3bb8"
+                "reference": "345ec8bb1223a7ddc50b88d23ab0e83ddc595e6d"
             },
             "require": {
                 "masterminds/html5": "^2.7",
                 "timber/timber": "^1.18"
             },
+            "default-branch": true,
             "type": "wordpress-theme",
             "scripts": {
                 "post-update-cmd": [
@@ -164,7 +165,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2021-09-23T20:43:49+00:00"
+            "time": "2022-02-22T22:50:45+00:00"
         },
         {
             "name": "colbycommunications/colby-base-theme",
@@ -3284,5 +3285,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.2.0"
 }
