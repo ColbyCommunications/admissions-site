@@ -52,6 +52,7 @@ class Algolia_Command {
                 $entry['description'] = strip_shortcodes($record['post_content']);
                 $entry['url'] = get_permalink($post);
                 $entry['tags'] = $tags;
+                $entry['type'] = 'wp';
                 $entry['id'] = $entry['objectID'] = implode('-', ["wp",$post->post_type, $post->ID]);
                 $records[] = $entry;
 
