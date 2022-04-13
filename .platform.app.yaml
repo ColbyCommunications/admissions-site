@@ -2,10 +2,10 @@
 # in the same project .
 
 # The name of this app. Must be unique within a project.
-name: admissions
+name: app
 
 # The runtime the application uses.
-type: "php:7.3"
+type: "php:7.4"
 
 # Configuration of the build of the application.
 build:
