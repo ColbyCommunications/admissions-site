@@ -221,7 +221,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
-                "reference": "5accd35e54d9254f6cba9f1f61fc746296b1034d"
+                "reference": "d3e758f3b8318f60ecefa5b07be741d2dd7bf1d0"
             },
             "require": {
                 "johnwatkins0/wp-autoload": "^1.0",
@@ -239,7 +239,7 @@
                     "phpcs"
                 ]
             },
-            "time": "2022-05-16T17:49:37+00:00"
+            "time": "2022-05-16T17:54:57+00:00"
         },
         {
             "name": "composer/ca-bundle",
