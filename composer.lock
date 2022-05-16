@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce6c9ab346b08015febd07a9b559fd82",
+    "content-hash": "7cefed0c92a2fe316aaba3c375ab6d5e",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -7345,6 +7345,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/wp-nested-pages/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-saml-auth",
+            "version": "1.2.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-saml-auth/",
+                "reference": "tags/1.2.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-saml-auth.1.2.7.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-saml-auth/"
         },
         {
             "name": "wpackagist-theme/twentyseventeen",
