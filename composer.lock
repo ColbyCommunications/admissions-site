@@ -221,7 +221,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
-                "reference": "657ec4f656343e037d8568f66b6b6397a3dca61b"
+                "reference": "5accd35e54d9254f6cba9f1f61fc746296b1034d"
             },
             "require": {
                 "johnwatkins0/wp-autoload": "^1.0",
@@ -232,13 +232,14 @@
                 "squizlabs/php_codesniffer": "^3.4",
                 "wp-coding-standards/wpcs": "^1.2"
             },
+            "default-branch": true,
             "type": "wordpress-plugin",
             "scripts": {
                 "lint": [
                     "phpcs"
                 ]
             },
-            "time": "2021-09-20T17:53:39+00:00"
+            "time": "2022-05-16T17:49:37+00:00"
         },
         {
             "name": "composer/ca-bundle",
