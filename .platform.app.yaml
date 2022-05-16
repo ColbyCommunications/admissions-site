@@ -31,10 +31,10 @@ mounts:
 web:
   locations: !include project/platform/web.locations.yaml
 
-dependencies:
-  php: !include project/platform/dependencies.php.yaml
-  nodejs:
-    gulp-cli: "*"
+# dependencies:
+#   php: !include project/platform/dependencies.php.yaml
+#   nodejs:
+#     gulp-cli: "*"
 
 runtime:
   extensions: !include project/platform/runtime.extensions.yaml

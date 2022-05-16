@@ -33,7 +33,9 @@
         "wp-graphql/wp-graphql": "^1.2.5",
         "pristas-peter/wp-graphql-gutenberg": "^0.3.4",
         "wpackagist-plugin/redirection": "^5.1",
-        "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.13"
+        "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.13",
+        "wp-cli/wp-cli-bundle": "^2.4",
+        "psy/psysh": "^0.10.4"
     },
     "authors": [
         {
