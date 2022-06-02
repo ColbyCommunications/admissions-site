@@ -36,7 +36,8 @@
         "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.13",
         "wp-cli/wp-cli-bundle": "^2.4",
         "psy/psysh": "^0.10.4",
-        "wpackagist-plugin/wp-saml-auth": "^1.1.0"
+        "wpackagist-plugin/wp-saml-auth": "^1.1.0",
+        "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^3.0"
     },
     "authors": [
         {
