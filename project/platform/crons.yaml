@@ -27,3 +27,10 @@ snapshot:
 ###     Project Specific    ###
 ###############################
 # Add any additional project specific cron jobs you need after this line
+# Take a daily snapshot/backup.
+syncsearch:
+    spec: '0 9 * * *'
+    cmd: |
+        if [ "$PLATFORM_BRANCH" = master ]; then
+            cd /app/web && /app/wp-cli.phar algolia reindex_post
+        fi

@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "johnpbloch/wordpress-core-installer": "^2.0",
-        "johnpbloch/wordpress": "^5.6",
+        "johnpbloch/wordpress": "^5.9",
         "ahebrank/wp-frontback": "dev-master",
         "devgeniem/wp-redis-object-cache-dropin": "^1.6",
         "colbycommunications/colby-base-theme": "dev-master",
@@ -33,7 +33,11 @@
         "wp-graphql/wp-graphql": "^1.2.5",
         "pristas-peter/wp-graphql-gutenberg": "^0.3.4",
         "wpackagist-plugin/redirection": "^5.1",
-        "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.13"
+        "wpackagist-plugin/duracelltomi-google-tag-manager": "^1.13",
+        "wp-cli/wp-cli-bundle": "^2.4",
+        "psy/psysh": "^0.10.4",
+        "wpackagist-plugin/wp-saml-auth": "^1.1.0",
+        "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^3.0"
     },
     "authors": [
         {
@@ -88,5 +92,14 @@
         "squizlabs/php_codesniffer": "*",
         "wp-coding-standards/wpcs": "^2.3",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "kylekatarnls/update-helper": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "johnpbloch/wordpress-core-installer": true,
+            "koodimonni/composer-dropin-installer": true
+        }
     }
 }
