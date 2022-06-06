@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c857eb0f017485a63aa2fb8ec88c73c7",
+    "content-hash": "f12103454c2603919d65609cf8a861a3",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -120,16 +120,17 @@
         },
         {
             "name": "colbycommunications/colby-admissions-theme",
-            "version": "dev-counselor-test",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "c323c2b7b925ea94e09da4ffef91837349de1701"
+                "reference": "c05b3a53e2a00bd1d1c25ec41a2d8e12639fc804"
             },
             "require": {
                 "masterminds/html5": "^2.7",
                 "timber/timber": "^1.18"
             },
+            "default-branch": true,
             "type": "wordpress-theme",
             "scripts": {
                 "post-update-cmd": [
@@ -147,7 +148,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2021-08-13T18:12:27+00:00"
+            "time": "2022-06-02T17:35:36+00:00"
         },
         {
             "name": "colbycommunications/colby-counselors",

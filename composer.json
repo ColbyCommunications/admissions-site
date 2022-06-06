@@ -6,7 +6,7 @@
         "johnpbloch/wordpress-core-installer": "^2.0",
         "johnpbloch/wordpress": "^5.9",
         "ahebrank/wp-frontback": "dev-master",
-        "colbycommunications/colby-admissions-theme": "dev-counselor-test",
+        "colbycommunications/colby-admissions-theme": "dev-master",
         "colbycommunications/colby-counselors": "dev-develop",
         "newcity/newcity-wp-wysiwyg": "^v0.2.4",
         "wpackagist-plugin/wordpress-importer": "^0.7.0",
