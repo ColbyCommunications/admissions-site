@@ -12,17 +12,16 @@ env_file:
 
 services:
   appserver:
-    type: php:7.3
+    type: php:7.4
     composer_version: 2
     build:
         # Intall the platform.sh CLI and make sure it is up to date.
         - "./scripts/lando-platform-install.sh"
     run:
-        - "platform self-update -y"
-        - "composer self-update"
-        # 'w' to let it know we're dealing with WordPress
-        - "./scripts/lando-run.sh n w"
-        - "./scripts/setup-mu-plugins.sh"
+      - "platform self-update -y"
+      - "composer self-update
+      - "./scripts/setup-mu-plugins.sh"
+      - ./scripts/symlink.sh /app/web/wp-content/mu-plugins/wordpress-seo/wp-seo.php /app/web/wp-content/mu-plugins/wp-seo.php
 events:
   post-start:
     # Install composer dependencies
