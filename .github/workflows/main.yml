@@ -74,14 +74,14 @@ jobs:
 
       - name: Set Domain ENV
         run: |
-          echo "DOMAIN=$( ~/.platformsh/bin/platform domains --format=plain --no-header --columns=name )" >> $GITHUB_ENV
+          echo "DOMAIN=afa.colby.edu" >> $GITHUB_ENV
           echo $DOMAIN
 
       - name: Generate Sitemap
         if: ${{ contains(env.DOMAIN, 'colby.edu')}}
         run: |
           ./scripts/sitemap_master.sh
-          flatten_sitemap --sitemap https://$( ~/.platformsh/bin/platform domains --format=plain --no-header --columns=name )/sitemap_index.xml --config .github/sitemap.json --limit 25 --randomize
+          flatten_sitemap --sitemap https://afa.colby.edu/sitemap_index.xml --config .github/sitemap.json --limit 25 --randomize
       
       - name: Generate Sitemap
         if: ${{ !contains(env.DOMAIN, 'colby.edu')}}
