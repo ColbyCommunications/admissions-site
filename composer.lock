@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37c9f8eb16315d929fcb6a31550c8d92",
+    "content-hash": "1b49a5f7f1ca7e0d50e5f114c0fe7759",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -152,7 +152,7 @@
         },
         {
             "name": "colbycommunications/colby-counselors",
-            "version": "dev-dev-updates",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
@@ -167,6 +167,7 @@
                 "squizlabs/php_codesniffer": "^3.4",
                 "wp-coding-standards/wpcs": "^1.2"
             },
+            "default-branch": true,
             "type": "wordpress-plugin",
             "scripts": {
                 "lint": [
@@ -6475,5 +6476,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
