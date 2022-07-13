@@ -42,7 +42,7 @@ jobs:
           node ./scripts/check_platform_feature_branch.js --branch=${GITHUB_REF#refs/heads/} --branchFrom=master --id=${{ secrets.PLATFORM_PROJECT_ID }}
         
       - name: Spin up environment
-
+        if: "!contains(github.event.head_commit.message, '[skip platform]')"
         run: |
           ~/.platformsh/bin/platform project:get ${{ secrets.PLATFORM_PROJECT_ID }} platform-remote --environment=${GITHUB_REF#refs/heads/}
           cd platform-remote
