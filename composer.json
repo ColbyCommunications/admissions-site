@@ -32,7 +32,7 @@
 		"wpackagist-plugin/query-monitor": "^3.7.1",
 		"wp-cli/wp-cli-bundle": "^2.4",
 		"psy/psysh": "^0.10.4",
-		"colbycommunications/advanced-custom-fields-pro": "^5.12.3",
+		"colbycommunications/advanced-custom-fields-pro": "5.11.4",
 		"colbycommunications/colby-ticket": "^1.0.0",
 		"vlucas/phpdotenv": "^5.4"
 	},
