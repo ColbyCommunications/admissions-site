@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fed64e7a0f9bd83be9e7136631abacc",
+    "content-hash": "a65374802f617c182f8e3b838a87052e",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -92,16 +92,16 @@
         },
         {
             "name": "colbycommunications/advanced-custom-fields-pro",
-            "version": "5.11.4",
+            "version": "5.12.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/advanced-custom-fields-pro.git",
-                "reference": "48af38e1aae394e6f259c5a163723abf9f3afe5c"
+                "reference": "86d7043b3f847940f8f318f66405bea44a3fd7fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://satis.colby.edu/dist/colbycommunications/advanced-custom-fields-pro/colbycommunications-advanced-custom-fields-pro-48af38e1aae394e6f259c5a163723abf9f3afe5c-zip-156b29.zip",
-                "reference": "48af38e1aae394e6f259c5a163723abf9f3afe5c"
+                "url": "https://satis.colby.edu/dist/colbycommunications/advanced-custom-fields-pro/colbycommunications-advanced-custom-fields-pro-86d7043b3f847940f8f318f66405bea44a3fd7fe-zip-0b34bb.zip",
+                "reference": "86d7043b3f847940f8f318f66405bea44a3fd7fe"
             },
             "type": "wordpress-plugin",
             "authors": [
@@ -115,7 +115,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2022-04-18T18:41:00+00:00"
+            "time": "2022-08-25T14:05:08+00:00"
         },
         {
             "name": "colbycommunications/colby-admissions-theme",
@@ -6250,15 +6250,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-nested-pages",
-            "version": "3.1.22",
+            "version": "3.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-nested-pages/",
-                "reference": "tags/3.1.22"
+                "reference": "tags/3.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.1.22.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
