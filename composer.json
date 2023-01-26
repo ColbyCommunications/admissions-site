@@ -14,7 +14,7 @@
 		"wpackagist-plugin/acf-extended": "^0.8.7.6",
 		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "^1.0",
 		"wpackagist-plugin/disable-comments": "^2.1",
-		"wpackagist-plugin/wp-nested-pages": "^3.1.13",
+		"wpackagist-plugin/wp-nested-pages": "^3.2",
 		"wpackagist-plugin/regenerate-thumbnails": "^3.1",
 		"wpackagist-plugin/simple-history": "^2.41",
 		"wpackagist-plugin/svg-support": "^2.3",
@@ -32,7 +32,7 @@
 		"wpackagist-plugin/query-monitor": "^3.7.1",
 		"wp-cli/wp-cli-bundle": "^2.4",
 		"psy/psysh": "^0.10.4",
-		"colbycommunications/advanced-custom-fields-pro": "^5.11.4",
+		"colbycommunications/advanced-custom-fields-pro": "^5.12.3",
 		"colbycommunications/colby-ticket": "^1.0.0",
 		"vlucas/phpdotenv": "^5.4"
 	},
