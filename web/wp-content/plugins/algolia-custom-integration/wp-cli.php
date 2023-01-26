@@ -7,7 +7,7 @@ if ( ! ( defined( 'WP_CLI' ) && WP_CLI ) ) {
 class Algolia_Command {
 	public function reindex_post( $args, $assoc_args ) {
 		global $algolia;
-		$index = $algolia->initIndex( 'Admissions' );
+		$index = $algolia->initIndex( 'Admissions2' );
 
 		//Clear previous index
 		$index->deleteBy( array( 'filters' => 'type:wp' ) )->wait();
