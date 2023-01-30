@@ -16,9 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - uses: webfactory/ssh-agent@v0.5.4
+      - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.WEBMASTER_SSH_PRIVATE_KEY }}
 
@@ -39,7 +39,7 @@ jobs:
           cat ~/.ssh/known_hosts
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
@@ -64,14 +64,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy_platform
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install Psh CLI
         run: |
           curl -sS https://platform.sh/cli/installer | php
           ~/.platformsh/bin/platform project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
@@ -85,7 +85,7 @@ jobs:
           ./scripts/sitemap.sh
 
       - name: Archive sitemap
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: sitemap
           path: .github/sitemap.json
@@ -95,9 +95,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: test_prep
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
@@ -106,13 +106,13 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
       - run: npm install -g lighthouse-batch
       - name: Download a single artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: sitemap
       - name: Audit URLs using Lighthouse
         run: npx lighthouse-batch -s $( jq -r '.urls | join(",")' sitemap.json ) --params "--extra-headers=.github/lighthouse_headers.json --throttling.cpuSlowdownMultiplier=0 --preset=desktop" --html --print
       - name: Archive Lighthouse Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: results
           path: report/lighthouse
@@ -122,12 +122,12 @@ jobs:
     runs-on: ubuntu-latest
     needs: lighthouse
     steps:
-      - uses: actions/checkout@v2
-      - uses: webfactory/ssh-agent@v0.5.4
+      - uses: actions/checkout@v3
+      - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.WEBMASTER_SSH_PRIVATE_KEY }}
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '14.x'
           registry-url: 'https://npm.pkg.github.com'
@@ -138,7 +138,7 @@ jobs:
           git clone --branch ghpages git@github.com:ColbyCommunications/${{ github.event.repository.name }}.git public
           rm -rf public/.git
       - name: Download lighthouse results
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: results
           path: report/lighthouse
@@ -284,7 +284,7 @@ jobs:
           EOL
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: ghpages
           build_dir: public

@@ -53,6 +53,27 @@ When setting up the site for the first time inside platform, the root user shoul
 
 ## Change Log
 
+### 3.0.3
+
+-   Updates GH actions versions for Node v12 warnings
+
+### 3.0.2
+
+-   Adds support for post passwords
+
+### 3.0.1
+
+-   Some codebase cleanup
+-   Adds phpcs.xml
+-   Cleans up composer.json a little bit
+
+### 3.0.0
+
+-   adds support for PHP 8.0
+-   upgrades Wordpress to 6.0
+-   upgrades WP SAML Auth Plugin to 2.\*
+-   upgrades Yoast plugin to 19.3
+
 ### 2.1.0
 
 -   adds github actions for interacting with Platform repos
