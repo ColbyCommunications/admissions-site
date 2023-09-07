@@ -62,7 +62,7 @@ class Algolia_Command {
 					$phone                = $counselor_post_meta['phone'][0];
 					$entry['title']       = "{$first_name} {$last_name}";
 					$entry['description'] = "{$first_name} {$last_name} - {$job_title} - {$email} - {$phone}";
-					$entry['url']         = '/counselors/';
+					$entry['url']         = 'https://afa.colby.edu/counselors/';
 				}
 				$entry['type'] = 'wp';
 				$entry['id']   = $entry['objectID'] = implode( '-', array( 'wp', $post->post_type, $post->ID ) );

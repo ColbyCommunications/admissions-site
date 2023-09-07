@@ -23,6 +23,9 @@
         '^/myintuition/?$':
           to: '/cost-and-aid/calculate-your-costs/myintuition-calculator/'
           regexp: true
+        '^/apply/nescac-admissions-practices/?$':
+          to: 'https://nescac.com/sports/2020/7/14/admissions-admissions.aspx?path=prospectivestu'
+          regexp: true
 
 # *ALL* www.* requests should be redirected back to primary domain
 "https://www.{all}/":
