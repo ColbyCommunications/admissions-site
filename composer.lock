@@ -123,7 +123,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "1ae554f062933dec78de83a4f05dd85e020b0fdf"
+                "reference": "c69673f0acc0845c7a4cdc666b586341ea18486e"
             },
             "require": {
                 "masterminds/html5": "^2.7",
@@ -147,7 +147,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2023-03-02T16:46:58+00:00"
+            "time": "2023-09-11T13:46:59+00:00"
         },
         {
             "name": "colbycommunications/colby-counselors",
