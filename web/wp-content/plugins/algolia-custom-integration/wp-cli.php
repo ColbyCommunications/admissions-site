@@ -54,7 +54,7 @@ class Algolia_Command {
 					!empty(trim(strip_tags(strip_shortcodes($record['post_content']))))
 					? strip_tags(strip_shortcodes($record['post_content']))
 					: (!empty(trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))))
-        	? implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))
+        	? trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc')))
         	: "Apply to Colby College and learn more about financial aid opportunities.");
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
