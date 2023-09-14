@@ -15,6 +15,6 @@ require_once __DIR__ . '/api-client/autoload.php';
 
 global $algolia;
 
-$algolia = \Algolia\AlgoliaSearch\SearchClient::create("2XJQHYFX2S", "69e4615fdea07b1ce2222585bb45306d");
+$algolia = \Algolia\AlgoliaSearch\SearchClient::create("2XJQHYFX2S", "69250f09667661adfdec67bfb257fcd4");
 
 require_once __DIR__ . '/wp-cli.php';

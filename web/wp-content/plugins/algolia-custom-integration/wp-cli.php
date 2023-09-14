@@ -7,7 +7,7 @@ if ( ! ( defined( 'WP_CLI' ) && WP_CLI ) ) {
 class Algolia_Command {
 	public function reindex_post( $args, $assoc_args ) {
 		global $algolia;
-		$index = $algolia->initIndex( 'Admissions' );
+		$index = $algolia->initIndex( 'Admissions2' );
 
 		//Clear previous index
 		$index->deleteBy( array( 'filters' => 'type:wp' ) )->wait();
@@ -50,7 +50,12 @@ class Algolia_Command {
 				$entry = array();
 				if ( get_post_type( $post ) !== 'counselors' ) {
 					$entry['title']       = $record['post_title'];
-					$entry['description'] = strip_shortcodes( $record['post_content'] );
+					$entry['description'] =
+					!empty(trim(strip_tags(strip_shortcodes($record['post_content']))))
+					? strip_tags(strip_shortcodes($record['post_content']))
+					: (!empty(trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))))
+        	? implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))
+        	: "Apply to Colby College and learn more about financial aid opportunities.");
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
 				} else {
