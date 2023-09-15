@@ -50,12 +50,10 @@ class Algolia_Command {
 				$entry = array();
 				if ( get_post_type( $post ) !== 'counselors' ) {
 					$entry['title']       = $record['post_title'];
-					$entry['description'] =
-					!empty(trim(strip_tags(strip_shortcodes($record['post_content']))))
-					? trim(strip_tags(strip_shortcodes($record['post_content'])))
-					: (!empty(trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))))
-        	? trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc')))
-        	: "Apply to Colby College and learn more about financial aid opportunities.");
+					$entry['description'] = 
+					!empty(trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))))
+					? trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc')))
+					: "Apply to Colby College and learn more about financial aid opportunities.";
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
 				} else {
