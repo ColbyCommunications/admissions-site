@@ -6,7 +6,7 @@
 		"johnpbloch/wordpress-core-installer": "^2.0",
 		"johnpbloch/wordpress": "6.1.1",
 		"ahebrank/wp-frontback": "dev-master",
-		"colbycommunications/colby-admissions-theme": "dev-gh-theme-migration",
+		"colbycommunications/colby-admissions-theme": "dev-master",
 		"colbycommunications/colby-counselors": "dev-develop",
 		"newcity/newcity-wp-wysiwyg": "^v0.2.4",
 		"wpackagist-plugin/accordion-blocks": "1.5.0",

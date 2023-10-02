@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8d6c65e5b8dd8640e5a38af765c10fc",
+    "content-hash": "e7887dae72062876eb429193a20ab3eb",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -119,16 +119,17 @@
         },
         {
             "name": "colbycommunications/colby-admissions-theme",
-            "version": "dev-gh-theme-migration",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "8cd99de3223617830cdd721c0929f9083efcb821"
+                "reference": "2505cbe4189b3ee76d3a65323d1f9fe50ddb1cf9"
             },
             "require": {
                 "masterminds/html5": "^2.7",
                 "timber/timber": "^1.18"
             },
+            "default-branch": true,
             "type": "wordpress-theme",
             "scripts": {
                 "post-update-cmd": [
@@ -146,7 +147,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2023-09-29T15:46:26+00:00"
+            "time": "2023-10-02T12:48:38+00:00"
         },
         {
             "name": "colbycommunications/colby-counselors",
@@ -3282,16 +3283,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.4.28",
+            "version": "v5.4.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "684b36ff415e1381d4a943c3ca2502cd2debad73"
+                "reference": "6172e4ae3534d25ee9e07eb487c20be7760fcc65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/684b36ff415e1381d4a943c3ca2502cd2debad73",
-                "reference": "684b36ff415e1381d4a943c3ca2502cd2debad73",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6172e4ae3534d25ee9e07eb487c20be7760fcc65",
+                "reference": "6172e4ae3534d25ee9e07eb487c20be7760fcc65",
                 "shasum": ""
             },
             "require": {
@@ -3351,7 +3352,7 @@
                 "dump"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v5.4.28"
+                "source": "https://github.com/symfony/var-dumper/tree/v5.4.29"
             },
             "funding": [
                 {
@@ -3367,7 +3368,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-24T13:38:36+00:00"
+            "time": "2023-09-12T10:09:58+00:00"
         },
         {
             "name": "timber/timber",
