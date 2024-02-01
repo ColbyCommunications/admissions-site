@@ -65,7 +65,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
         env:
@@ -91,7 +91,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
         env:
@@ -102,7 +102,7 @@ jobs:
         with:
           name: sitemap
       - name: Audit URLs using Lighthouse
-        run: npx lighthouse-batch -s $( jq -r '.urls | join(",")' sitemap.json ) --params "--extra-headers=.github/lighthouse_headers.json --throttling.cpuSlowdownMultiplier=0 --preset=desktop" --html --print
+        run: npx lighthouse-batch -s $( jq -r '.urls | join(",")' sitemap.json ) --params "--extra-headers=.github/lighthouse_headers.json" --html --print
       - name: Archive Lighthouse Results
         uses: actions/upload-artifact@v3
         with:
@@ -121,7 +121,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: '14.x'
+          node-version: '20.x'
           registry-url: 'https://npm.pkg.github.com'
       - name: Clone Pages
         run: |
