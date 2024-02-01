@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ef960f47ff4a9bcac79206ee58fbbda9",
+    "content-hash": "78ae04ca76b4d1f7808009d2cd278a84",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -6136,15 +6136,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "19.14",
+            "version": "21.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/19.14"
+                "reference": "tags/21.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.19.14.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.21.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
