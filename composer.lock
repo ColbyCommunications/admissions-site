@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78ae04ca76b4d1f7808009d2cd278a84",
+    "content-hash": "ace8d3368e44c7470187fee829d32e8f",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -5902,15 +5902,15 @@
         },
         {
             "name": "wpackagist-plugin/acf-extended",
-            "version": "0.8.9.5",
+            "version": "0.8.7.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/acf-extended/",
-                "reference": "tags/0.8.9.5"
+                "reference": "tags/0.8.7.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-extended.0.8.9.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/acf-extended.0.8.7.6.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
