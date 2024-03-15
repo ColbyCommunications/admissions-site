@@ -32,6 +32,11 @@ class Algolia_Command {
 
 			foreach ( $posts->posts as $post ) {
 
+				// exclude ASP from search
+				if ($post->ID === 5198) {
+					continue;
+				}
+
 				$post_tags      = wp_get_post_tags( $post->ID );
 				$tag_name_array = array();
 				$tags           = '';
