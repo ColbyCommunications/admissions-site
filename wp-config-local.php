@@ -11,7 +11,7 @@ if ( 'ON' === getenv( 'LANDO' ) ) {
 	define( 'DB_HOST', $objLandoInfo->database->internal_connection->host );
 	define( 'DB_CHARSET', 'utf8' );
 	define( 'DB_COLLATE', '' );
-	define( 'WP_DEBUG', true );
+	define( 'WP_DEBUG', false );
 	define( 'WP_DEBUG_LOG', false );
 	define( 'WP_DEBUG_SCREEN', false );
 
