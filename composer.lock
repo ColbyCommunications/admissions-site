@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47a8cad4d3b780a3f504277269ff3e67",
+    "content-hash": "4dfd79ff2bec0f2dd1e6c0047f292b47",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -6302,15 +6302,15 @@
         },
         {
             "name": "wpackagist-plugin/simple-history",
-            "version": "4.16.0",
+            "version": "5.6.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/simple-history/",
-                "reference": "tags/4.16.0"
+                "reference": "tags/5.6.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simple-history.4.16.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/simple-history.5.6.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
