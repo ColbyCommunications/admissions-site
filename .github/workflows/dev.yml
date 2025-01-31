@@ -77,7 +77,7 @@ jobs:
           ./scripts/sitemap.sh
 
       - name: Archive sitemap
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: sitemap
           path: .github/sitemap.json
@@ -98,13 +98,13 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
       - run: npm install -g lighthouse-batch
       - name: Download a single artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: sitemap
       - name: Audit URLs using Lighthouse
         run: npx lighthouse-batch -s $( jq -r '.urls | join(",")' sitemap.json ) --params "--extra-headers=.github/lighthouse_headers.json" --html --print
       - name: Archive Lighthouse Results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: results
           path: report/lighthouse
@@ -130,7 +130,7 @@ jobs:
           git clone --branch ghpages git@github.com:ColbyCommunications/${{ github.event.repository.name }}.git public
           rm -rf public/.git
       - name: Download lighthouse results
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: results
           path: report/lighthouse
