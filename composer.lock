@@ -121,7 +121,7 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/colby-admissions-theme.git",
-                "reference": "ab839e6fe11056bf18ea66151648aa15fc161c9b"
+                "reference": "5e560ec0b13414ba182dfa49be8b5b7b406f0dd4"
             },
             "require": {
                 "masterminds/html5": "^2.7",
@@ -145,7 +145,7 @@
                     "composer run-script post-update-cmd"
                 ]
             },
-            "time": "2025-03-18T20:10:32+00:00"
+            "time": "2025-03-19T17:10:52+00:00"
         },
         {
             "name": "colbycommunications/colby-counselors",
@@ -1130,16 +1130,16 @@
         },
         {
             "name": "gettext/languages",
-            "version": "2.11.0",
+            "version": "2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-gettext/Languages.git",
-                "reference": "77f3675a9e5d1be15b2064ecf0a1d27348d96cb2"
+                "reference": "0b0b0851c55168e1dfb14305735c64019732b5f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-gettext/Languages/zipball/77f3675a9e5d1be15b2064ecf0a1d27348d96cb2",
-                "reference": "77f3675a9e5d1be15b2064ecf0a1d27348d96cb2",
+                "url": "https://api.github.com/repos/php-gettext/Languages/zipball/0b0b0851c55168e1dfb14305735c64019732b5f1",
+                "reference": "0b0b0851c55168e1dfb14305735c64019732b5f1",
                 "shasum": ""
             },
             "require": {
@@ -1189,7 +1189,7 @@
             ],
             "support": {
                 "issues": "https://github.com/php-gettext/Languages/issues",
-                "source": "https://github.com/php-gettext/Languages/tree/2.11.0"
+                "source": "https://github.com/php-gettext/Languages/tree/2.12.1"
             },
             "funding": [
                 {
@@ -1201,7 +1201,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-18T10:27:00+00:00"
+            "time": "2025-03-19T11:14:02+00:00"
         },
         {
             "name": "graham-campbell/result-type",
