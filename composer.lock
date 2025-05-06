@@ -152,7 +152,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-counselors",
-                "reference": "c2e1a5dff950b628953cf80d326622908f075806"
+                "reference": "79881c62b0061f2e5a79a89bd6e4a97623dc708a"
             },
             "require": {
                 "johnwatkins0/wp-autoload": "^1.0",
@@ -169,7 +169,7 @@
                     "phpcs"
                 ]
             },
-            "time": "2025-05-05T14:37:00+00:00"
+            "time": "2025-05-06T14:32:43+00:00"
         },
         {
             "name": "colbycommunications/colby-ticket",
