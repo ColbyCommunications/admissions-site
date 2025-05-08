@@ -32,7 +32,9 @@
 		"psy/psysh": "^0.10.4",
 		"colbycommunications/advanced-custom-fields-pro": "6.3.11",
 		"colbycommunications/colby-ticket": "1.0.1",
-		"vlucas/phpdotenv": "^5.4"
+		"vlucas/phpdotenv": "^5.4",
+		"wpackagist-plugin/wordpress-importer": "0.8.3",
+		"wpackagist-plugin/term-management-tools": "2.0.1"
 	},
 	"authors": [
 		{
