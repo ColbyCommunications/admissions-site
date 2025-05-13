@@ -5,6 +5,7 @@
     "author": "",
     "license": "None",
     "dependencies": {
-        "superagent": "7.0.2"
+        "superagent": "7.0.2",
+        "@colbycommunications/colby-lighthouse-batch": "1.0.2"
     }
 }

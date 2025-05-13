@@ -26,11 +26,11 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | d
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm current
-nvm install 16.13.1
+nvm install 20.10.0
 
 
 unset NPM_CONFIG_PREFIX
-nvm use 16.13.1
+nvm use 20.10.0
 
 # run npm install in all colby dependencies
 ./scripts/dependencies-run-install-build.sh

@@ -7,6 +7,7 @@
 ###############################
 '^/robots\.txt$':
   allow: true
+  passthru: '/web/wp-content/robots.txt'
 '^/sitemap\.xml$':
   allow: true
 #reserved

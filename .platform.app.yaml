@@ -5,7 +5,7 @@
 name: app
 
 # The runtime the application uses.
-type: "php:8.0"
+type: "php:8.3"
 
 # Configuration of the build of the application.
 build:
@@ -41,6 +41,8 @@ runtime:
 dependencies:
   php:
     composer/composer: "^2"
+  nodejs:
+    yarn: "*"
 
 # The hooks that will be performed when the package is deployed.
 hooks:

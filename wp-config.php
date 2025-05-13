@@ -63,6 +63,12 @@ if (false !== $strRelationships = getenv('PLATFORM_RELATIONSHIPS')) {
     define('DB_CHARSET', 'utf8');
     define('DB_COLLATE', '');
 
+    if ( 'master' == getenv( 'PLATFORM_BRANCH' ) ) {
+		define( 'ALGOLIA_INDEX_NAME_PREFIX', 'prod_platformsh-wp-starter_' );
+	} else {
+		define( 'ALGOLIA_INDEX_NAME_PREFIX', 'platform_platformsh-wp-starter_' );
+	}
+
     //we need routes for both multi and standard
     $aryRoutes = array();//assume we dont have it
     if (false !== $strRoutes = getenv('PLATFORM_ROUTES')) {
