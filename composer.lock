@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dfd79ff2bec0f2dd1e6c0047f292b47",
+    "content-hash": "14b1d509364d58e83fb28a7ad42ad56e",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -6439,6 +6439,24 @@
             "homepage": "https://wordpress.org/plugins/svg-support/"
         },
         {
+            "name": "wpackagist-plugin/term-management-tools",
+            "version": "2.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/term-management-tools/",
+                "reference": "tags/2.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/term-management-tools.2.0.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/term-management-tools/"
+        },
+        {
             "name": "wpackagist-plugin/ultimate-dashboard",
             "version": "3.8.5",
             "source": {
@@ -6455,6 +6473,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ultimate-dashboard/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.8.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.8.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.3.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
