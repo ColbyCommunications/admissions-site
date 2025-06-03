@@ -1,5 +1,12 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+define('PLATFORM_VARIABLES', json_decode($_ENV['PLATFORM_VARS'], true));
+
 // Set host values
 $site_scheme = 'http';
 $site_host = 'localhost';
@@ -56,13 +63,19 @@ if (false !== $strRelationships = getenv('PLATFORM_RELATIONSHIPS')) {
     define('DB_CHARSET', 'utf8');
     define('DB_COLLATE', '');
 
+    if ( 'master' == getenv( 'PLATFORM_BRANCH' ) ) {
+		define( 'ALGOLIA_INDEX_NAME_PREFIX', 'prod_platformsh-wp-starter_' );
+	} else {
+		define( 'ALGOLIA_INDEX_NAME_PREFIX', 'platform_platformsh-wp-starter_' );
+	}
+
     //we need routes for both multi and standard
     $aryRoutes = array();//assume we dont have it
     if (false !== $strRoutes = getenv('PLATFORM_ROUTES')) {
         $aryRoutes = json_decode(base64_decode($strRoutes), true);
     }
 
-    if (MULTISITE && SUBDOMAIN_INSTALL) {
+    if (MULTISITE) {
         if (false === $strPrimaryDomain = getenv('PRIMARY_DOMAIN')) {
             //@todo we need a way to fail here
             echo "This is a multidomain multisite but the primary domain ENV is missing.\n";
@@ -132,8 +145,8 @@ if (false !== $strRelationships = getenv('PLATFORM_RELATIONSHIPS')) {
     }
 } else {
     // You can create a wp-config-local.php file with local configuration.
-    if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
-        include( dirname( __FILE__ ) . '/wp-config-local.php' );
+    if (file_exists(dirname(__FILE__) . '/wp-config-local.php') ) {
+        include dirname(__FILE__) . '/wp-config-local.php';
     }
 }
 
@@ -141,7 +154,7 @@ if (false !== $strRelationships = getenv('PLATFORM_RELATIONSHIPS')) {
 define('WP_HOME', $site_scheme . '://' . $site_host);
 define('WP_SITEURL', WP_HOME . '/wp');
 
-define( 'WP_CONTENT_DIR', dirname( __FILE__ ) . '/web/wp-content' );
+define('WP_CONTENT_DIR', dirname(__FILE__) . '/web/wp-content');
 
 $strContentURL =  WP_HOME . '/wp-content';
 if (MULTISITE) {
@@ -161,7 +174,7 @@ if (MULTISITE) {
     }
 }
 
-define( 'WP_CONTENT_URL', $strContentURL);
+define('WP_CONTENT_URL', $strContentURL);
 
 // Since you can have multiple installations in one database, you need a unique
 // prefix.
@@ -174,7 +187,7 @@ $table_prefix  = 'wp_';
  */
 
 if (file_exists(dirname(__FILE__) . '/wp-config-extras.php')) {
-    include(dirname(__FILE__) . '/wp-config-extras.php');
+    include dirname(__FILE__) . '/wp-config-extras.php';
 }
 
 // Default PHP settings.
@@ -185,13 +198,20 @@ ini_set('session.cookie_lifetime', 2000000);
 ini_set('pcre.backtrack_limit', 200000);
 ini_set('pcre.recursion_limit', 200000);
 
-/** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
+/**
+ * Absolute path to the WordPress directory. 
+*/
+if (!defined('ABSPATH') ) {
     define('ABSPATH', dirname(__FILE__) . '/');
+}
+
+// Elementor icon support
+define('FS_METHOD', 'direct');
 
 /**
  * Sets up WordPress vars and included files.
  * Moved to ./web/wp-config.php
+ *
  * @see https://github.com/wp-cli/wp-cli/issues/1218
  */
 //require_once(ABSPATH . 'wp-settings.php');

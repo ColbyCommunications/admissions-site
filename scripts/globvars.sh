@@ -19,5 +19,4 @@ CWARN=`tput setaf 7 -T ${TERM};tput setab 1 -T ${TERM}`
 NEWHOME="/user"
 #default location for home in lando
 DEFAULTHOME="/var/www"
-DIGITALSERVICECONTACT="digitalservice@missouri.edu"
-VCSSSHDOMAIN="vcs.missouri.edu"
+DIGITALSERVICECONTACT="webmaster@colby.edu"

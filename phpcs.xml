@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<ruleset name="PHP_CodeSniffer">
+
+<description>PHPCS configuration file.</description>
+<!-- check all files in the app directory, feel free to add more files with:
+<file>FOLDER NAME</file>
+-->
+<file>./</file>
+
+<exclude-pattern>wp/*</exclude-pattern>
+<exclude-pattern>*/vendor/*</exclude-pattern>
+<exclude-pattern>wordpress/*</exclude-pattern>
+<exclude-pattern>wp-content/themes/twentytwenty/*</exclude-pattern>
+<exclude-pattern>wp-content/plugins/*</exclude-pattern>
+<exclude-pattern>*/node_modules/*</exclude-pattern>
+
+<!-- ignore warnings and display ERRORS only -->
+<!-- <arg  value="np"/> -->
+
+<!-- Our base rule: set to WordPress standards -->
+<rule ref="WordPress-Core"/>
+
+</ruleset>

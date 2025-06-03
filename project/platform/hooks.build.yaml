@@ -13,12 +13,32 @@ curl -sS https://platform.sh/cli/installer | php
 ###        WORDPRESS        ###
 ###############################
 # create a symlink to our actual file in the root of mu-plugins
-./scripts/digitalservice/setup-mu-plugins.sh
+./scripts/setup-mu-plugins.sh
+
+# fix mu-plugin symlinks for irregular plugins
+./scripts/symlink.sh /app/web/wp-content/mu-plugins/wordpress-seo/wp-seo.php /app/web/wp-content/mu-plugins/wp-seo.php
+
+################################
+###          NODE           ###
+###############################
+unset NPM_CONFIG_PREFIX
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | dash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm current
+nvm install 20.10.0
+
+
+unset NPM_CONFIG_PREFIX
+nvm use 20.10.0
+
+# run npm install in all colby dependencies
+./scripts/dependencies-run-install-build.sh
+
+# generate .env
+node ./scripts/platform_generate-env.js
 
 ################################
 ###     Project Specific    ###
 ###############################
-# Add any additional project specific build hooks you need in the environment after this line
-# If you are setting up a WordPress multidomain multisite, make sure you require the "mizzou/multisite-cookie-mapper"
-# dependency in composer.json, and then uncomment the following line
-#./scripts/digitalservice/symlink.sh /app/web/wp-content/mu-plugins/multisite-cookie-mapper/multisite-cookie-mapper.php /app/web/wp-content/mu-plugins/multisite-cookie-mapper.php
+# Add any additional project specific build hooks you need in the environment after this line.
