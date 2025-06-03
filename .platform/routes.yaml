@@ -21,6 +21,8 @@
           to: "/wp/wp-admin/$1"
           regexp: true
 
+        !include project/site_specific/platform/routes.yaml
+
 # *ALL* www.* requests should be redirected back to primary domain
 "https://www.{all}/":
     type: redirect
