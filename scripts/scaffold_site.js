@@ -7,7 +7,7 @@ const path = require('path');
 
 // Create "project/site_specific"
 const projectRoot = process.cwd();
-const siteSpecificPath = path.join(projectRoot, 'project', 'site_specific_test');
+const siteSpecificPath = path.join(projectRoot, 'project', 'site_specific');
 fs.mkdirSync(siteSpecificPath, { recursive: true });
 
 // Create "lando" folder and "name.yaml" file
@@ -70,11 +70,10 @@ if (fs.existsSync(path.join(projectRoot, 'percy'))) {
 
     // Move the file
     fs.renameSync(path.join(projectRoot, 'percy', 'percy.js'), finalPercyPath);
+    fs.rmdirSync(path.join(projectRoot, 'percy'));
 } else {
     fs.writeFileSync(path.join(finalPercyDir, 'percy.js'), '');
 }
-
-fs.rmdirSync(path.join(projectRoot, 'percy'));
 
 // Create config folder
 fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config'), { recursive: true });
