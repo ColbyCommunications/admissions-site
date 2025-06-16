@@ -34,11 +34,13 @@ mounts:
 web:
   locations: !include project/platform/web.locations.yaml
 
-dependencies:
-  php: !include project/platform/dependencies.php.yaml
-
 runtime:
-  extensions: !include project/platform/runtime.extensions.yaml
+  extensions: 
+    - readline
+
+dependencies:
+  php:
+    composer/composer: "^2"
 
 # The hooks that will be performed when the package is deployed.
 hooks:
