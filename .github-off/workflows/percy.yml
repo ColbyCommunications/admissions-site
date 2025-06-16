@@ -41,3 +41,4 @@ jobs:
       - name: Set Up Chrome
         uses: browser-actions/setup-chrome@v1
       - run: npx percy exec -- node project/site_specific/tests/percy/percy.js
+      - run: npx percy exec -- node project/global/tests/percy/percy.js
