@@ -23,12 +23,12 @@ disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    "/web/wp-content/uploads": "shared:files/uploads"
-    "/web/wp-content/cache": "shared:files/cache"
-#   '/simplesaml/cert': 'shared:files/simplesaml/cert'
-#   '/simplesaml/logs': 'shared:files/simplesaml/logs'
-#   '/simplesaml/data': 'shared:files/simplesaml/data'
-#   '/simplesaml/tmp': 'shared:files/simplesaml/tmp'
+  "/web/wp-content/uploads": "shared:files/uploads"
+  "/web/wp-content/cache": "shared:files/cache"
+  "/web/wp-content/okta": "shared:files/plugins/okta"
+  "/web/.well-known/pki-validation":
+    source: local
+    source_path: web
 
 # The configuration of app when it is exposed to the web.
 web:
