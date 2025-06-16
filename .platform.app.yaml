@@ -5,7 +5,7 @@
 name: app
 
 # The runtime the application uses.
-type: "php:7.2"
+type: "php:8.3"
 
 # Configuration of the build of the application.
 build:
@@ -19,7 +19,7 @@ relationships:
   database: "mysqldb:mysql"
 
 # The size of the persistent disk of the application (in MB).
-disk: !include project/site_specific/platform/app.disk.yaml
+disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
