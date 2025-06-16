@@ -112,7 +112,16 @@ cd -
 shopt -u extglob
 `;
 
-fs.writeFileSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), depScriptContent);
+fs.writeFileSync(
+    path.join(
+        projectRoot,
+        'project',
+        'site_specific',
+        'scripts',
+        ' dependencies-run-install-build.sh'
+    ),
+    depScriptContent
+);
 
 fs.existsSync('chmod +x project/site_specific/scripts');
 
