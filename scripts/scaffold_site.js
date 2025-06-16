@@ -20,6 +20,7 @@ const platformPath = path.join(siteSpecificPath, 'platform');
 fs.mkdirSync(platformPath, { recursive: true });
 fs.writeFileSync(path.join(platformPath, 'app.disk.yaml'), '2048');
 fs.writeFileSync(path.join(platformPath, 'mysql.disk.yaml'), '');
+fs.writeFileSync(path.join(platformPath, 'mysql.php.yaml'), '');
 fs.writeFileSync(path.join(platformPath, 'routes.yaml'), '');
 
 // Create composer_requirements.php
