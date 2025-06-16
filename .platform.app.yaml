@@ -52,5 +52,3 @@ hooks:
 variables:
   env: !include project/platform/variables.env.yaml
 
-# The configuration of scheduled execution.
-crons: !include project/platform/crons.yaml
