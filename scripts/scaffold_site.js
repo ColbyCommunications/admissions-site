@@ -104,14 +104,14 @@ fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), { re
 const depScriptContent = `
 #!/usr/bin/env bash
 
-printf "Installing NPM dependencies for Colby dependencies \n"
+printf "Installing NPM dependencies for Colby dependencies"
 
 shopt -s extglob # Turns on extended globbing
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-printf "Build Colby Theme... \n"
+printf "Build Colby Theme..."
 cd web/wp-content/themes/colby-college-theme
 composer install
 composer dump-autoload
@@ -129,7 +129,7 @@ fs.writeFileSync(
         'project',
         'site_specific',
         'scripts',
-        ' dependencies-run-install-build.sh'
+        'dependencies-run-install-build.sh'
     ),
     depScriptContent
 );

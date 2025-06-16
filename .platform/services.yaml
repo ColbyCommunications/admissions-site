@@ -5,4 +5,4 @@
 
 mysqldb:
     type: mysql:10.2
-    disk: !include project/site_specific/platform/mysql.disk.yaml
+    disk: !include ../project/site_specific/platform/mysql.disk.yaml
