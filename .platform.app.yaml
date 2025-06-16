@@ -19,7 +19,7 @@ relationships:
   database: "mysqldb:mysql"
 
 # The size of the persistent disk of the application (in MB).
-disk: 2048
+disk: !include project/site_specific/platform/app.disk.yaml
 
 # The mounts that will be performed when the package is deployed.
 mounts:
@@ -51,4 +51,4 @@ hooks:
 
 variables:
   env: !include project/platform/variables.env.yaml
-
+  php: !include project/site_specific/platform/app.php.yaml
