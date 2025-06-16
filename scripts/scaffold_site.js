@@ -21,7 +21,17 @@ fs.mkdirSync(platformPath, { recursive: true });
 fs.writeFileSync(path.join(platformPath, 'app.disk.yaml'), '2048');
 fs.writeFileSync(path.join(platformPath, 'mysql.disk.yaml'), '');
 fs.writeFileSync(path.join(platformPath, 'app.php.yaml'), '');
-fs.writeFileSync(path.join(platformPath, 'routes.yaml'), '');
+
+const routesContent = `
+'^/wp-admin$':
+  to: "/wp/wp-admin/"
+  regexp: true
+'^/wp-admin/(.*)':
+  to: "/wp/wp-admin/$1"
+  regexp: true
+`;
+
+fs.writeFileSync(path.join(platformPath, 'routes.yaml'), routesContent);
 
 // Create composer_requirements.php
 const composerContent = `{
