@@ -29,7 +29,7 @@ const composerContent = `{
 }
 `;
 
-fs.writeFileSync(path.join(siteSpecificPath, 'composer_requirements.php'), composerContent);
+fs.writeFileSync(path.join(siteSpecificPath, 'composer_requirements.json'), composerContent);
 
 // Create package.json
 const packageJsonContent = `{
