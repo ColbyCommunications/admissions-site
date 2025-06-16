@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 
 const branch = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
 
-if (branch === 'dev') {
+if (branch === 'maint-test') {
     // Get current month and year
     const now = new Date();
     const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
@@ -28,7 +28,7 @@ if (branch === 'dev') {
 /**
  * Sync starter
  */
-execSync('git pull upstream master --allow-unrelated-histories', (err, stdout, stderr) => {
+execSync('git pull upstream dev --allow-unrelated-histories', (err, stdout, stderr) => {
     if (err) {
         console.error('Error running git command:', err);
         return;
