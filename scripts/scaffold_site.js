@@ -31,7 +31,6 @@ const composerContent = `{
 fs.writeFileSync(path.join(siteSpecificPath, 'composer_requirements.php'), composerContent);
 
 // Create package.json
-// Create composer_requirements.php
 const packageJsonContent = `{
     "name": "@colbycommunications/site",
     "version": "1.0.0",
@@ -76,6 +75,47 @@ if (fs.existsSync(path.join(projectRoot, 'percy'))) {
 }
 
 fs.rmdirSync(path.join(projectRoot, 'percy'));
+
+// Create config folder
+fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config'), { recursive: true });
+
+// Create wp-config-site.php
+const wpConfig = `<?php`;
+
+fs.writeFileSync(
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'wp-config-site.php'),
+    wpConfig
+);
+
+// Create scripts folder
+fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), { recursive: true });
+
+// Create dependencies-run-install-build.sh
+const depScriptContent = `
+#!/usr/bin/env bash
+
+printf "Installing NPM dependencies for Colby dependencies \n"
+
+shopt -s extglob # Turns on extended globbing
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+printf "Build Colby Theme... \n"
+cd web/wp-content/themes/colby-college-theme
+composer install
+composer dump-autoload
+yarn
+yarn scripts:build
+cd -
+
+# npm install
+shopt -u extglob
+`;
+
+fs.writeFileSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), depScriptContent);
+
+fs.existsSync('chmod +x project/site_specific/scripts');
 
 console.log('All files and folders created successfully!');
 

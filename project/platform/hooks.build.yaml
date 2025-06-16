@@ -33,7 +33,7 @@ unset NPM_CONFIG_PREFIX
 nvm use 20.10.0
 
 # run npm install in all colby dependencies
-./scripts/dependencies-run-install-build.sh
+./project/site_specific/scripts/dependencies-run-install-build.sh
 
 # generate .env
 node ./scripts/platform_generate-env.js
