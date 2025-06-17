@@ -97,6 +97,11 @@ fs.writeFileSync(
     wpConfig
 );
 
+fs.writeFileSync(
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress.config.js'),
+    ''
+);
+
 // Create scripts folder
 fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), { recursive: true });
 
