@@ -38,3 +38,5 @@
 
 # Sage
 web/wp-content/cache
+
+cypress.env.json
