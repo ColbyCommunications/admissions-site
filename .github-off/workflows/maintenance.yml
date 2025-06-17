@@ -10,4 +10,5 @@ jobs:
   cypress:
     runs-on: ubuntu-latest
     steps:
-      run: npm run tests
+      - name: Run Cypress Tests
+        run: npm run tests
