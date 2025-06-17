@@ -4,7 +4,7 @@
     "type": "project",
     "require": {
         "johnpbloch/wordpress-core-installer": "^2.0",
-        "johnpbloch/wordpress-core": "6.7.1",
+        "johnpbloch/wordpress-core": "6.8.1",
         "wpackagist-plugin/header-footer": "3.3.0",
         "wpackagist-plugin/duplicate-post": "4.5",
         "wpackagist-plugin/wordpress-seo": "24.2",
