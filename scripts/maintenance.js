@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 
 const branch = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
 
-if (branch === 'maint-test') {
+if (branch === 'dev') {
     // Get current month and year
     const now = new Date();
     const month = String(now.getMonth() + 1).padStart(2, '0'); // Months are 0-based
