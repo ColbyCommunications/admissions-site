@@ -1,8 +1,6 @@
 name: Run Maintenance
 on:
-  push:
-    branches:
-      - 'maintenance-*'
+  workflow_call:
 env:
   CYPRESS_ENV_JSON: ${{ secrets.CYPRESS_ENV_JSON }}
 jobs:

@@ -97,9 +97,16 @@ fs.writeFileSync(
     wpConfig
 );
 
+const cypressConfigContent = `
+const { defineConfig } = require('cypress');
+
+module.exports = defineConfig({
+    defaultCommandTimeout: 10000,
+});
+`;
 fs.writeFileSync(
     path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress.config.js'),
-    ''
+    cypressConfigContent
 );
 
 // Create scripts folder
