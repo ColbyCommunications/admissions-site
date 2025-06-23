@@ -45,3 +45,13 @@ execSync('node ./scripts/composer_update.js', (err, stdout, stderr) => {
         return;
     }
 });
+
+/**
+ * Run npm script
+ */
+execSync('node ./scripts/npm_install.js', (err, stdout, stderr) => {
+    if (err) {
+        console.error('Error running git command:', err);
+        return;
+    }
+});
