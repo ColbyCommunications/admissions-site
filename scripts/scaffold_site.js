@@ -10,11 +10,6 @@ const projectRoot = process.cwd();
 const siteSpecificPath = path.join(projectRoot, 'project', 'site_specific');
 fs.mkdirSync(siteSpecificPath, { recursive: true });
 
-// Create "lando" folder and "name.yaml" file
-const landoPath = path.join(siteSpecificPath, 'lando');
-fs.mkdirSync(landoPath, { recursive: true });
-fs.writeFileSync(path.join(landoPath, 'name.yaml'), '');
-
 // Create "platform" folder and 3 files
 const platformPath = path.join(siteSpecificPath, 'platform');
 fs.mkdirSync(platformPath, { recursive: true });
@@ -142,7 +137,7 @@ fs.writeFileSync(
     depScriptContent
 );
 
-fs.existsSync('chmod +x project/site_specific/scripts');
+fs.existsSync('chmod +x project/site_specific/scripts/*');
 
 console.log('All files and folders created successfully!');
 
