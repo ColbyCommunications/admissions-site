@@ -92,16 +92,53 @@ fs.writeFileSync(
     wpConfig
 );
 
+// Create config/cypress folder
+fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress'), {
+    recursive: true,
+});
+fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support'), {
+    recursive: true,
+});
+
 const cypressConfigContent = `
 const { defineConfig } = require('cypress');
 
+const { execSync } = require('child_process');
+let site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
+let siteFull = \`https://${site}\`;
+
 module.exports = defineConfig({
     defaultCommandTimeout: 10000,
+    e2e: {
+        baseUrl: siteFull,
+        supportFile: 'project/site_specific/config/cypress/support/e2e.js',
+        specPattern: ['project/site_specific/tests/cypress/*', 'project/global/tests/cypress/*'],
+    },
 });
+
 `;
 fs.writeFileSync(
-    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress.config.js'),
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'cypress.config.js'),
     cypressConfigContent
+);
+
+fs.writeFileSync(
+    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support', 'e2e.js'),
+    `
+import './commands'
+`
+);
+fs.writeFileSync(
+    path.join(
+        projectRoot,
+        'project',
+        'site_specific',
+        'config',
+        'cypress',
+        'support',
+        'commands.js'
+    ),
+    ''
 );
 
 // Create scripts folder

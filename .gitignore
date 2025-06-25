@@ -39,4 +39,5 @@
 # Sage
 web/wp-content/cache
 
+/cypress
 cypress.env.json
