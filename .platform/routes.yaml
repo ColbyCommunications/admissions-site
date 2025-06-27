@@ -13,19 +13,7 @@
         cookies: ['/^SS?ESS/', '/^wordpress_/', '/^wp-settings/', '/^wp-postpass_/']
     redirects:
       expires: 1d
-      paths:
-        '^/wp-admin$':
-          to: "/wp/wp-admin/"
-          regexp: true
-        '^/wp-admin/(.*)':
-          to: "/wp/wp-admin/$1"
-          regexp: true
-        '^/myintuition/?$':
-          to: '/cost-and-aid/calculate-your-costs/myintuition-calculator/'
-          regexp: true
-        '^/apply/nescac-admissions-practices/?$':
-          to: 'https://nescac.com/sports/2020/7/14/admissions-admissions.aspx?path=prospectivestu'
-          regexp: true
+      paths: !include ../project/site_specific/platform/routes.yaml
 
 # *ALL* www.* requests should be redirected back to primary domain
 "https://www.{all}/":

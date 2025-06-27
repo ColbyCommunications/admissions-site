@@ -9,7 +9,7 @@ type: "php:8.3"
 
 # Configuration of the build of the application.
 build:
-  flavor: composer
+    flavor: composer
 
 # The relationships of the application with services or other applications.
 # The left-hand side is the name of the relationship as it will be exposed
@@ -19,7 +19,7 @@ relationships:
   database: "mysqldb:mysql"
 
 # The size of the persistent disk of the application (in MB).
-disk: 2048
+disk: !include project/site_specific/platform/app.disk.yaml
 
 # The mounts that will be performed when the package is deployed.
 mounts:
@@ -41,6 +41,9 @@ runtime:
 dependencies:
   php:
     composer/composer: "^2"
+  nodejs:
+    n: "*"
+    yarn: "*"
 
 # The hooks that will be performed when the package is deployed.
 hooks:
@@ -53,9 +56,4 @@ hooks:
 
 variables:
   env: !include project/platform/variables.env.yaml
-  php:
-    upload_max_filesize: 128M
-    memory_limit: 256M
-
-# The configuration of scheduled execution.
-crons: !include project/platform/crons.yaml
+  php: !include project/site_specific/platform/app.php.yaml
