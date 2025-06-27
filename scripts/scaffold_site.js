@@ -105,7 +105,7 @@ const { defineConfig } = require('cypress');
 
 const { execSync } = require('child_process');
 let site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
-let siteFull = \`https://${site}\`;
+let siteFull = \`https://\${site\}\`;
 
 module.exports = defineConfig({
     defaultCommandTimeout: 10000,
