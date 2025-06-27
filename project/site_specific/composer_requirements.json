@@ -1,0 +1,37 @@
+{
+	"require": {
+		"colbycommunications/colby-counselors": "dev-develop",
+		"colbycommunications/colby-admissions-theme": "dev-master",
+		"newcity/newcity-wp-wysiwyg": "^v0.2.4",
+		"ahebrank/wp-frontback": "dev-master",
+		"wpackagist-plugin/accordion-blocks": "1.5.0",
+		"wpackagist-plugin/acf-extended": "0.8.7.6",
+		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "1.0.0",
+		"wpackagist-plugin/simple-history": "5.6.0",
+		"wpackagist-plugin/svg-support": "2.5.8",
+		"wpackagist-plugin/ultimate-dashboard": "3.8.5",
+		"wpackagist-plugin/redirection": "5.5.1",
+		"wpackagist-plugin/duracelltomi-google-tag-manager": "1.20.3",
+		"wpackagist-plugin/acf-content-analysis-for-yoast-seo": "3.1",
+		"wpackagist-plugin/wordpress-importer": "0.8.3",
+		"wpackagist-plugin/term-management-tools": "2.0.1"
+	},
+	"repositories": [
+		{
+			"type": "git",
+			"url": "git@github.com:ColbyCommunications/colby-admissions-theme.git"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/colby-counselors"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/wp-autoload"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/wp-singleton"
+		}
+	]
+}

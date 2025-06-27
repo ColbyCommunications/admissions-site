@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 /**
  * Create folders and files
@@ -7,15 +7,15 @@ const path = require('path');
 
 // Create "project/site_specific"
 const projectRoot = process.cwd();
-const siteSpecificPath = path.join(projectRoot, 'project', 'site_specific');
+const siteSpecificPath = path.join(projectRoot, "project", "site_specific");
 fs.mkdirSync(siteSpecificPath, { recursive: true });
 
 // Create "platform" folder and 3 files
-const platformPath = path.join(siteSpecificPath, 'platform');
+const platformPath = path.join(siteSpecificPath, "platform");
 fs.mkdirSync(platformPath, { recursive: true });
-fs.writeFileSync(path.join(platformPath, 'app.disk.yaml'), '2048');
-fs.writeFileSync(path.join(platformPath, 'mysql.disk.yaml'), '');
-fs.writeFileSync(path.join(platformPath, 'app.php.yaml'), '');
+fs.writeFileSync(path.join(platformPath, "app.disk.yaml"), "2048");
+fs.writeFileSync(path.join(platformPath, "mysql.disk.yaml"), "");
+fs.writeFileSync(path.join(platformPath, "app.php.yaml"), "");
 
 const routesContent = `
 '^/wp-admin$':
@@ -26,7 +26,7 @@ const routesContent = `
   regexp: true
 `;
 
-fs.writeFileSync(path.join(platformPath, 'routes.yaml'), routesContent);
+fs.writeFileSync(path.join(platformPath, "routes.yaml"), routesContent);
 
 // Create composer_requirements.php
 const composerContent = `{
@@ -34,7 +34,10 @@ const composerContent = `{
 }
 `;
 
-fs.writeFileSync(path.join(siteSpecificPath, 'composer_requirements.json'), composerContent);
+fs.writeFileSync(
+	path.join(siteSpecificPath, "composer_requirements.json"),
+	composerContent
+);
 
 // Create package.json
 const packageJsonContent = `{
@@ -49,63 +52,101 @@ const packageJsonContent = `{
 }
 `;
 
-fs.writeFileSync(path.join(siteSpecificPath, 'package.json'), packageJsonContent);
+fs.writeFileSync(
+	path.join(siteSpecificPath, "package.json"),
+	packageJsonContent
+);
 
 // Create robots.txt
-if (!fs.existsSync(path.join(projectRoot, 'robots.txt'))) {
-    fs.writeFileSync(
-        path.join(projectRoot, 'robots.txt'),
-        `User-agent: *
+if (!fs.existsSync(path.join(projectRoot, "robots.txt"))) {
+	fs.writeFileSync(
+		path.join(projectRoot, "robots.txt"),
+		`User-agent: *
 Allow: /
 `
-    );
+	);
 }
 
 // Create tests folder
-fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'tests'), { recursive: true });
+fs.mkdirSync(path.join(projectRoot, "project", "site_specific", "tests"), {
+	recursive: true,
+});
 
-const finalPercyDir = path.join(projectRoot, 'project', 'site_specific', 'tests', 'percy');
+const finalPercyDir = path.join(
+	projectRoot,
+	"project",
+	"site_specific",
+	"tests",
+	"percy"
+);
 fs.mkdirSync(finalPercyDir, { recursive: true });
 
-const finalCypressDir = path.join(projectRoot, 'project', 'site_specific', 'tests', 'cypress');
+const finalCypressDir = path.join(
+	projectRoot,
+	"project",
+	"site_specific",
+	"tests",
+	"cypress"
+);
 fs.mkdirSync(finalCypressDir, { recursive: true });
 
 // move percy if it exists
-if (fs.existsSync(path.join(projectRoot, 'percy'))) {
-    const finalPercyPath = path.join(finalPercyDir, 'percy.js');
+if (fs.existsSync(path.join(projectRoot, "percy"))) {
+	const finalPercyPath = path.join(finalPercyDir, "percy.js");
 
-    // Move the file
-    fs.renameSync(path.join(projectRoot, 'percy', 'percy.js'), finalPercyPath);
-    fs.rmdirSync(path.join(projectRoot, 'percy'));
+	// Move the file
+	fs.renameSync(path.join(projectRoot, "percy", "percy.js"), finalPercyPath);
+	fs.rmdirSync(path.join(projectRoot, "percy"));
 } else {
-    fs.writeFileSync(path.join(finalPercyDir, 'percy.js'), '');
+	fs.writeFileSync(path.join(finalPercyDir, "percy.js"), "");
 }
 
 // Create config folder
-fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config'), { recursive: true });
+fs.mkdirSync(path.join(projectRoot, "project", "site_specific", "config"), {
+	recursive: true,
+});
 
 // Create wp-config-site.php
 const wpConfig = `<?php`;
 
 fs.writeFileSync(
-    path.join(projectRoot, 'project', 'site_specific', 'config', 'wp-config-site.php'),
-    wpConfig
+	path.join(
+		projectRoot,
+		"project",
+		"site_specific",
+		"config",
+		"wp-config-site.php"
+	),
+	wpConfig
 );
 
 // Create config/cypress folder
-fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress'), {
-    recursive: true,
-});
-fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support'), {
-    recursive: true,
-});
+fs.mkdirSync(
+	path.join(projectRoot, "project", "site_specific", "config", "cypress"),
+	{
+		recursive: true,
+	}
+);
+fs.mkdirSync(
+	path.join(
+		projectRoot,
+		"project",
+		"site_specific",
+		"config",
+		"cypress",
+		"support"
+	),
+	{
+		recursive: true,
+	}
+);
 
 const cypressConfigContent = `
 const { defineConfig } = require('cypress');
 
 const { execSync } = require('child_process');
 let site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
-let siteFull = \`https://${site}\`;
+let siteFull = \`https://\${site\}\`;
 
 module.exports = defineConfig({
     defaultCommandTimeout: 10000,
@@ -118,31 +159,48 @@ module.exports = defineConfig({
 
 `;
 fs.writeFileSync(
-    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'cypress.config.js'),
-    cypressConfigContent
+	path.join(
+		projectRoot,
+		"project",
+		"site_specific",
+		"config",
+		"cypress",
+		"cypress.config.js"
+	),
+	cypressConfigContent
 );
 
 fs.writeFileSync(
-    path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support', 'e2e.js'),
-    `
+	path.join(
+		projectRoot,
+		"project",
+		"site_specific",
+		"config",
+		"cypress",
+		"support",
+		"e2e.js"
+	),
+	`
 import './commands'
 `
 );
 fs.writeFileSync(
-    path.join(
-        projectRoot,
-        'project',
-        'site_specific',
-        'config',
-        'cypress',
-        'support',
-        'commands.js'
-    ),
-    ''
+	path.join(
+		projectRoot,
+		"project",
+		"site_specific",
+		"config",
+		"cypress",
+		"support",
+		"commands.js"
+	),
+	""
 );
 
 // Create scripts folder
-fs.mkdirSync(path.join(projectRoot, 'project', 'site_specific', 'scripts'), { recursive: true });
+fs.mkdirSync(path.join(projectRoot, "project", "site_specific", "scripts"), {
+	recursive: true,
+});
 
 // Create dependencies-run-install-build.sh
 const depScriptContent = `
@@ -164,19 +222,19 @@ cd -
 `;
 
 fs.writeFileSync(
-    path.join(
-        projectRoot,
-        'project',
-        'site_specific',
-        'scripts',
-        'dependencies-run-install-build.sh'
-    ),
-    depScriptContent
+	path.join(
+		projectRoot,
+		"project",
+		"site_specific",
+		"scripts",
+		"dependencies-run-install-build.sh"
+	),
+	depScriptContent
 );
 
-fs.existsSync('chmod +x project/site_specific/scripts/*');
+fs.existsSync("chmod +x project/site_specific/scripts/*");
 
-console.log('All files and folders created successfully!');
+console.log("All files and folders created successfully!");
 
 // done
-console.log('Site scaffolded successfully!');
+console.log("Site scaffolded successfully!");
