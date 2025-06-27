@@ -17,10 +17,7 @@ fs.readFile('./project/site_specific/composer_requirements.json', 'utf8', (err, 
 
     const siteRequirementsData = JSON.parse(data);
     composerData.require = { ...composerData.require, ...siteRequirementsData.require };
-    composerData.repositories = {
-        ...composerData.repositories,
-        ...siteRequirementsData.repositories,
-    };
+    composerData.repositories = siteRequirementsData.repositories.concat(composerData.repositories);
     const outputData = JSON.stringify(composerData, null, 2);
 
     fs.writeFile('composer.json', outputData, (err) => {
