@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3514318c3a92788b8c5953ccad4682b2",
+    "content-hash": "03c5ff1b42ff74647d12b82d4ec5f571",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -90,18 +90,23 @@
         },
         {
             "name": "colbycommunications/advanced-custom-fields-pro",
-            "version": "6.3.11",
+            "version": "6.4.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/advanced-custom-fields-pro.git",
-                "reference": "ed2d11578f4946a9c15ef891de3f998905271ff4"
+                "reference": "288472a52f89837d40f6db829ca168dbea05baf0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://satis.colby.edu/dist/colbycommunications/advanced-custom-fields-pro/colbycommunications-advanced-custom-fields-pro-ed2d11578f4946a9c15ef891de3f998905271ff4-zip-b983fe.zip",
-                "reference": "ed2d11578f4946a9c15ef891de3f998905271ff4"
+                "url": "https://satis.colby.edu/dist/colbycommunications/advanced-custom-fields-pro/colbycommunications-advanced-custom-fields-pro-288472a52f89837d40f6db829ca168dbea05baf0-zip-f3d990.zip",
+                "reference": "288472a52f89837d40f6db829ca168dbea05baf0"
             },
             "type": "wordpress-plugin",
+            "autoload": {
+                "psr-4": {
+                    "ACF\\": "src/"
+                }
+            },
             "authors": [
                 {
                     "name": "Brandon Waltz",
@@ -113,20 +118,20 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2025-01-03T14:56:00+00:00"
+            "time": "2025-06-27T14:29:22+00:00"
         },
         {
             "name": "colbycommunications/capabilities-pro",
-            "version": "2.13.0",
+            "version": "2.19.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/capabilities-pro.git",
-                "reference": "d5473e219e73b3b97c85a904289360091b7d8ec4"
+                "reference": "e7dabb829e8349528610a844dfaf957faeec08a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://satis.colby.edu/dist/colbycommunications/capabilities-pro/colbycommunications-capabilities-pro-d5473e219e73b3b97c85a904289360091b7d8ec4-zip-365307.zip",
-                "reference": "d5473e219e73b3b97c85a904289360091b7d8ec4"
+                "url": "https://satis.colby.edu/dist/colbycommunications/capabilities-pro/colbycommunications-capabilities-pro-e7dabb829e8349528610a844dfaf957faeec08a5-zip-6e0624.zip",
+                "reference": "e7dabb829e8349528610a844dfaf957faeec08a5"
             },
             "require": {
                 "php": ">=7.2.5"
@@ -226,7 +231,7 @@
                     "email": "help@publishpress.com"
                 }
             ],
-            "time": "2024-07-08T16:13:40+00:00"
+            "time": "2025-06-27T16:42:10+00:00"
         },
         {
             "name": "colbycommunications/colby-admissions-theme",
@@ -262,11 +267,11 @@
         },
         {
             "name": "colbycommunications/colby-college-theme",
-            "version": "3.0.1",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-college-theme",
-                "reference": "a1ff534311667d06595e6d90b2f81798be54a020"
+                "reference": "db92de3e33d145d46c9dcd26ec209ba700b9d01d"
             },
             "require": {
                 "php": ">=7.1"
@@ -282,7 +287,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2025-02-04T22:01:04+00:00"
+            "time": "2025-05-01T18:19:42+00:00"
         },
         {
             "name": "colbycommunications/colby-counselors",
@@ -339,16 +344,16 @@
         },
         {
             "name": "colbycommunications/gravityforms",
-            "version": "2.9.1.3",
+            "version": "2.9.11",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/gravityforms.git",
-                "reference": "1685fd1c92bd2d9a1898580564c2b1c98d701bb8"
+                "reference": "ebd4143a04a725adb72f00350df37a79e038e984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://satis.colby.edu/dist/colbycommunications/gravityforms/colbycommunications-gravityforms-1685fd1c92bd2d9a1898580564c2b1c98d701bb8-zip-bc8549.zip",
-                "reference": "1685fd1c92bd2d9a1898580564c2b1c98d701bb8"
+                "url": "https://satis.colby.edu/dist/colbycommunications/gravityforms/colbycommunications-gravityforms-ebd4143a04a725adb72f00350df37a79e038e984-zip-0271ca.zip",
+                "reference": "ebd4143a04a725adb72f00350df37a79e038e984"
             },
             "type": "wordpress-plugin",
             "authors": [
@@ -362,7 +367,34 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2025-01-03T14:52:33+00:00"
+            "time": "2025-06-27T16:33:38+00:00"
+        },
+        {
+            "name": "colbycommunications/presspermit-pro",
+            "version": "4.3.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:ColbyCommunications/presspermit-pro.git",
+                "reference": "01fd52a873d4879cc5b4e6fbbc7b455d5d71e88a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://satis.colby.edu/dist/colbycommunications/presspermit-pro/colbycommunications-presspermit-pro-01fd52a873d4879cc5b4e6fbbc7b455d5d71e88a-zip-19c6e8.zip",
+                "reference": "01fd52a873d4879cc5b4e6fbbc7b455d5d71e88a"
+            },
+            "type": "wordpress-plugin",
+            "authors": [
+                {
+                    "name": "Brandon Waltz",
+                    "email": "brandon.waltz@colby.edu"
+                }
+            ],
+            "description": "Premium Publish Press Permissions plugin",
+            "homepage": "https://github.com/colbycommunications/presspermit-pro",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2025-06-27T16:44:18+00:00"
         },
         {
             "name": "colbycommunications/wp-autoload",
@@ -1813,16 +1845,16 @@
         },
         {
             "name": "mck89/peast",
-            "version": "v1.17.0",
+            "version": "v1.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mck89/peast.git",
-                "reference": "3a752d39bd7d8dc1e19bcf424f3d5ac1a1ca6ad5"
+                "reference": "90e01c0da3a5a1c2c06d94a56fa2e0594769d525"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mck89/peast/zipball/3a752d39bd7d8dc1e19bcf424f3d5ac1a1ca6ad5",
-                "reference": "3a752d39bd7d8dc1e19bcf424f3d5ac1a1ca6ad5",
+                "url": "https://api.github.com/repos/mck89/peast/zipball/90e01c0da3a5a1c2c06d94a56fa2e0594769d525",
+                "reference": "90e01c0da3a5a1c2c06d94a56fa2e0594769d525",
                 "shasum": ""
             },
             "require": {
@@ -1835,7 +1867,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.17.0-dev"
+                    "dev-master": "1.17.1-dev"
                 }
             },
             "autoload": {
@@ -1856,9 +1888,9 @@
             "description": "Peast is PHP library that generates AST for JavaScript code",
             "support": {
                 "issues": "https://github.com/mck89/peast/issues",
-                "source": "https://github.com/mck89/peast/tree/v1.17.0"
+                "source": "https://github.com/mck89/peast/tree/v1.17.1"
             },
-            "time": "2025-03-07T19:44:14+00:00"
+            "time": "2025-06-27T14:33:03+00:00"
         },
         {
             "name": "nb/oxymel",
@@ -6294,15 +6326,15 @@
         },
         {
             "name": "wpackagist-plugin/acf-content-analysis-for-yoast-seo",
-            "version": "3.1",
+            "version": "3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/acf-content-analysis-for-yoast-seo/",
-                "reference": "tags/3.1"
+                "reference": "tags/3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.3.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/acf-content-analysis-for-yoast-seo.3.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6366,15 +6398,15 @@
         },
         {
             "name": "wpackagist-plugin/disable-comments",
-            "version": "2.4.6",
+            "version": "2.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/disable-comments/",
-                "reference": "tags/2.4.6"
+                "reference": "tags/2.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-comments.2.4.6.zip"
+                "url": "https://downloads.wordpress.org/plugin/disable-comments.2.5.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6402,15 +6434,15 @@
         },
         {
             "name": "wpackagist-plugin/duracelltomi-google-tag-manager",
-            "version": "1.20.3",
+            "version": "1.21.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/duracelltomi-google-tag-manager/",
-                "reference": "tags/1.20.3"
+                "reference": "tags/1.21.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/duracelltomi-google-tag-manager.1.20.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/duracelltomi-google-tag-manager.1.21.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6420,15 +6452,15 @@
         },
         {
             "name": "wpackagist-plugin/header-footer",
-            "version": "3.3.0",
+            "version": "3.3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/header-footer/",
-                "reference": "tags/3.3.0"
+                "reference": "tags/3.3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/header-footer.3.3.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/header-footer.3.3.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6456,15 +6488,15 @@
         },
         {
             "name": "wpackagist-plugin/redirection",
-            "version": "5.5.1",
+            "version": "5.5.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redirection/",
-                "reference": "tags/5.5.1"
+                "reference": "tags/5.5.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redirection.5.5.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/redirection.5.5.2.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6492,15 +6524,15 @@
         },
         {
             "name": "wpackagist-plugin/simple-history",
-            "version": "5.6.0",
+            "version": "5.12.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/simple-history/",
-                "reference": "tags/5.6.0"
+                "reference": "tags/5.12.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/simple-history.5.6.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/simple-history.5.12.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6510,15 +6542,15 @@
         },
         {
             "name": "wpackagist-plugin/svg-support",
-            "version": "2.5.8",
+            "version": "2.5.14",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/svg-support/",
-                "reference": "tags/2.5.8"
+                "reference": "tags/2.5.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/svg-support.2.5.8.zip"
+                "url": "https://downloads.wordpress.org/plugin/svg-support.2.5.14.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6546,15 +6578,15 @@
         },
         {
             "name": "wpackagist-plugin/ultimate-dashboard",
-            "version": "3.8.5",
+            "version": "3.8.9",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/ultimate-dashboard/",
-                "reference": "tags/3.8.5"
+                "reference": "tags/3.8.9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ultimate-dashboard.3.8.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/ultimate-dashboard.3.8.9.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6563,16 +6595,34 @@
             "homepage": "https://wordpress.org/plugins/ultimate-dashboard/"
         },
         {
-            "name": "wpackagist-plugin/wordpress-importer",
-            "version": "0.8.3",
+            "name": "wpackagist-plugin/user-switching",
+            "version": "1.9.1",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "tags/0.8.3"
+                "url": "https://plugins.svn.wordpress.org/user-switching/",
+                "reference": "tags/1.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.3.zip"
+                "url": "https://downloads.wordpress.org/plugin/user-switching.1.9.1.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/user-switching/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.8.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.8.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.8.4.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6600,15 +6650,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-nested-pages",
-            "version": "3.2.10",
+            "version": "3.2.13",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-nested-pages/",
-                "reference": "tags/3.2.10"
+                "reference": "tags/3.2.13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.10.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-nested-pages.3.2.13.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6618,15 +6668,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-saml-auth",
-            "version": "2.1.4",
+            "version": "2.2.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-saml-auth/",
-                "reference": "tags/2.1.4"
+                "reference": "tags/2.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-saml-auth.2.1.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-saml-auth.2.2.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -6636,15 +6686,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-search-with-algolia",
-            "version": "2.8.1",
+            "version": "2.10.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-search-with-algolia/",
-                "reference": "tags/2.8.1"
+                "reference": "tags/2.10.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-search-with-algolia.2.8.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/wp-search-with-algolia.2.10.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
