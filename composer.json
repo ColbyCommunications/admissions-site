@@ -7,7 +7,7 @@
 		"johnpbloch/wordpress-core": "6.8.1",
 		"wpackagist-plugin/header-footer": "3.3.2",
 		"wpackagist-plugin/duplicate-post": "4.5",
-		"wpackagist-plugin/wordpress-seo": "24.2",
+		"wpackagist-plugin/wordpress-seo": "25.3.1",
 		"wpackagist-plugin/cloudflare": "4.12.8",
 		"wpackagist-plugin/public-post-preview": "3.0.1",
 		"wpackagist-plugin/wp-saml-auth": "2.2.0",
