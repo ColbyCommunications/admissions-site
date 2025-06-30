@@ -23,7 +23,7 @@ let siteFull = `https://${site}`;
     await new Promise(function (resolve) {
         setTimeout(async function () {
             await testPage.evaluate(scrollToBottom, scrollOptions);
-
+            await percySnapshot(testPage, 'Snapshot of test page');
             resolve();
         }, 3000);
     });
