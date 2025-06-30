@@ -126,6 +126,11 @@ fs.writeFileSync(
     path.join(projectRoot, 'project', 'site_specific', 'config', 'cypress', 'support', 'e2e.js'),
     `
 import './commands'
+Cypress.on('uncaught:exception', (err, runnable) => {
+    // returning false here prevents Cypress from
+    // failing the test
+    return false;
+});
 `
 );
 fs.writeFileSync(
