@@ -1,0 +1,15 @@
+{
+    "devDependencies": {
+        "@percy/cli": "^1.28.0",
+        "@percy/puppeteer": "^2.0.2",
+        "scroll-to-bottomjs": "^1.1.0",
+        "cypress": "^14.4.1"
+    },
+    "dependencies": {
+        "superagent": "10.2.1",
+        "@colbycommunications/colby-lighthouse-batch": "1.0.2"
+    },
+    "scripts": {
+        "tests": "npx cypress run --config-file project/site_specific/config/cypress/cypress.config.js"
+    }
+}

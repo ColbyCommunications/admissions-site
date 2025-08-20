@@ -1,39 +1,45 @@
 {
-	"name": "colbycommunications/admissions",
-	"description": "Configuration project for the afa.colby.edu site",
+	"name": "colby-college/platform-wp-starter",
+	"description": "Starter template for the colby theme",
 	"type": "project",
 	"require": {
 		"johnpbloch/wordpress-core-installer": "^2.0",
-		"johnpbloch/wordpress": "6.7.1",
-		"ahebrank/wp-frontback": "dev-master",
-		"colbycommunications/colby-admissions-theme": "dev-master",
-		"colbycommunications/colby-counselors": "dev-develop",
-		"newcity/newcity-wp-wysiwyg": "^v0.2.4",
-		"wpackagist-plugin/accordion-blocks": "1.5.0",
-		"wpackagist-plugin/acf-autosize": "2.0.15",
-		"wpackagist-plugin/acf-extended": "0.8.7.6",
-		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "1.0.0",
-		"wpackagist-plugin/disable-comments": "2.4.7",
-		"wpackagist-plugin/wp-nested-pages": "3.2.10",
-		"wpackagist-plugin/regenerate-thumbnails": "3.1.6",
-		"wpackagist-plugin/simple-history": "5.6.0",
-		"wpackagist-plugin/svg-support": "2.5.8",
-		"wpackagist-plugin/ultimate-dashboard": "3.8.5",
-		"wpackagist-plugin/redirection": "5.5.1",
-		"wpackagist-plugin/duracelltomi-google-tag-manager": "1.20.3",
-		"wpackagist-plugin/acf-content-analysis-for-yoast-seo": "3.1",
+		"johnpbloch/wordpress-core": "6.8.1",
+		"wpackagist-plugin/header-footer": "3.3.2",
 		"wpackagist-plugin/duplicate-post": "4.5",
-		"wpackagist-plugin/wordpress-seo": "23.0",
+		"wpackagist-plugin/wordpress-seo": "25.3.1",
 		"wpackagist-plugin/cloudflare": "4.12.8",
 		"wpackagist-plugin/public-post-preview": "3.0.1",
-		"wpackagist-plugin/wp-saml-auth": "2.1.4",
-		"wpackagist-plugin/siteimprove": "2.0.7",
+		"wpackagist-plugin/wp-saml-auth": "2.2.0",
 		"wp-cli/wp-cli-bundle": "^2.4",
 		"psy/psysh": "^0.10.4",
-		"colbycommunications/advanced-custom-fields-pro": "6.3.11",
-		"colbycommunications/colby-ticket": "1.0.1",
+		"colbycommunications/advanced-custom-fields-pro": "6.4.2",
+		"colbycommunications/gravityforms": "2.9.11",
+		"colbycommunications/colby-ticket": "^1.0.0",
+		"wpackagist-plugin/wp-search-with-algolia": "2.10.1",
 		"vlucas/phpdotenv": "^5.4",
-		"wpackagist-plugin/wordpress-importer": "0.8.3",
+		"colbycommunications/colby-college-theme": "3.3.1",
+		"wpackagist-plugin/regenerate-thumbnails": "3.1.6",
+		"wpackagist-plugin/disable-comments": "2.5.2",
+		"colbycommunications/capabilities-pro": "2.19.2",
+		"wpackagist-plugin/wp-nested-pages": "3.2.13",
+		"wpackagist-plugin/user-switching": "1.9.1",
+		"colbycommunications/presspermit-pro": "4.3.2",
+		"wpackagist-plugin/advanced-gutenberg": "3.2.4",
+		"colbycommunications/colby-counselors": "dev-develop",
+		"colbycommunications/colby-admissions-theme": "dev-master",
+		"newcity/newcity-wp-wysiwyg": "^v0.2.4",
+		"ahebrank/wp-frontback": "dev-master",
+		"wpackagist-plugin/accordion-blocks": "1.5.0",
+		"wpackagist-plugin/acf-extended": "0.8.7.6",
+		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "1.0.0",
+		"wpackagist-plugin/simple-history": "5.15.0",
+		"wpackagist-plugin/svg-support": "2.5.14",
+		"wpackagist-plugin/ultimate-dashboard": "3.8.9",
+		"wpackagist-plugin/redirection": "5.5.2",
+		"wpackagist-plugin/duracelltomi-google-tag-manager": "1.21.1",
+		"wpackagist-plugin/acf-content-analysis-for-yoast-seo": "3.2",
+		"wpackagist-plugin/wordpress-importer": "0.8.4",
 		"wpackagist-plugin/term-management-tools": "2.0.1"
 	},
 	"authors": [
@@ -52,12 +58,24 @@
 			"url": "https://github.com/ColbyCommunications/colby-counselors"
 		},
 		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/wp-autoload"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/wp-singleton"
+		},
+		{
 			"type": "composer",
 			"url": "https://wpackagist.org/"
 		},
 		{
 			"type": "composer",
 			"url": "https://satis.colby.edu"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/colby-college-theme"
 		}
 	],
 	"extra": {
@@ -74,16 +92,6 @@
 				"type:wordpress-theme"
 			]
 		}
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"rm -rf wp-content/plugins/ahebrank/.git"
-		]
-	},
-	"require-dev": {
-		"squizlabs/php_codesniffer": "*",
-		"wp-coding-standards/wpcs": "^2.3",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0"
 	},
 	"config": {
 		"allow-plugins": true

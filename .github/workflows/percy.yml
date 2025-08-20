@@ -1,15 +1,19 @@
-name: Refresh
+name: Percy
 on:
   workflow_dispatch:
   workflow_call:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 0 * * 1"
 env:
   PLATFORMSH_CLI_TOKEN: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
   PLATFORM_PROJECT_ID: ${{ secrets.PLATFORM_PROJECT_ID }}
+  PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+  WEBMASTER_GITHUB_ACTIONS_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
 jobs:
   run_percy:
     runs-on: ubuntu-latest
+    env: 
+      PERCY_PARALLEL_TOTAL: 2
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -29,4 +33,13 @@ jobs:
             ssh-keyscan $ip; \
           done 2>/dev/null >> ~/.ssh/known_hosts
           cat ~/.ssh/known_hosts
-      - run: ~/.platformsh/bin/platform redeploy --environment=dev -y
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+      - run: ~/.platformsh/bin/platform redeploy -y
+      - run: npm install
+      - name: Set Up Chrome
+        uses: browser-actions/setup-chrome@v1
+      - run: npx percy exec -- node project/site_specific/tests/percy/percy.js && npx percy exec -- node project/global/tests/percy/percy.js
