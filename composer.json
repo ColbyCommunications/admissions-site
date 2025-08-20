@@ -25,6 +25,7 @@
 		"wpackagist-plugin/wp-nested-pages": "3.2.13",
 		"wpackagist-plugin/user-switching": "1.9.1",
 		"colbycommunications/presspermit-pro": "4.3.2",
+		"wpackagist-plugin/advanced-gutenberg": "3.2.4",
 		"colbycommunications/colby-counselors": "dev-develop",
 		"colbycommunications/colby-admissions-theme": "dev-master",
 		"newcity/newcity-wp-wysiwyg": "^v0.2.4",
@@ -32,7 +33,7 @@
 		"wpackagist-plugin/accordion-blocks": "1.5.0",
 		"wpackagist-plugin/acf-extended": "0.8.7.6",
 		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "1.0.0",
-		"wpackagist-plugin/simple-history": "5.12.0",
+		"wpackagist-plugin/simple-history": "5.15.0",
 		"wpackagist-plugin/svg-support": "2.5.14",
 		"wpackagist-plugin/ultimate-dashboard": "3.8.9",
 		"wpackagist-plugin/redirection": "5.5.2",
@@ -49,20 +50,8 @@
 	],
 	"repositories": [
 		{
-			"type": "composer",
-			"url": "https://wpackagist.org/"
-		},
-		{
-			"type": "composer",
-			"url": "https://satis.colby.edu"
-		},
-		{
 			"type": "git",
 			"url": "git@github.com:ColbyCommunications/colby-admissions-theme.git"
-		},
-		{
-			"type": "git",
-			"url": "https://github.com/ColbyCommunications/colby-college-theme"
 		},
 		{
 			"type": "git",
@@ -75,6 +64,18 @@
 		{
 			"type": "git",
 			"url": "https://github.com/ColbyCommunications/wp-singleton"
+		},
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org/"
+		},
+		{
+			"type": "composer",
+			"url": "https://satis.colby.edu"
+		},
+		{
+			"type": "git",
+			"url": "https://github.com/ColbyCommunications/colby-college-theme"
 		}
 	],
 	"extra": {
