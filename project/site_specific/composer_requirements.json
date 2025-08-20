@@ -7,7 +7,7 @@
 		"wpackagist-plugin/accordion-blocks": "1.5.0",
 		"wpackagist-plugin/acf-extended": "0.8.7.6",
 		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "1.0.0",
-		"wpackagist-plugin/simple-history": "5.12.0",
+		"wpackagist-plugin/simple-history": "5.15.0",
 		"wpackagist-plugin/svg-support": "2.5.14",
 		"wpackagist-plugin/ultimate-dashboard": "3.8.9",
 		"wpackagist-plugin/redirection": "5.5.2",
@@ -33,5 +33,11 @@
 			"type": "git",
 			"url": "https://github.com/ColbyCommunications/wp-singleton"
 		}
-	]
+	],
+	"extra": {
+		"wordpress-install-dir": "web/wp",
+		"installer-paths": {
+			"web/wp-content/mu-plugins/{$name}": []
+		}
+	}
 }

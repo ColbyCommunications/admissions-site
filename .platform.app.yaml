@@ -29,6 +29,7 @@ mounts:
   "/web/.well-known/pki-validation":
     source: local
     source_path: web
+  "/web/wp-content/themes/colby-college-theme/simplesaml": "shared:files/simplesaml"
 
 # The configuration of app when it is exposed to the web.
 web:
