@@ -10,6 +10,6 @@
         "@colbycommunications/colby-lighthouse-batch": "1.0.2"
     },
     "scripts": {
-        "tests": "npx cypress run --config-file project/site_specific/config/cypress.config.js"
+        "tests": "npx cypress run --config-file project/site_specific/config/cypress/cypress.config.js"
     }
 }

@@ -12,6 +12,8 @@ env:
 jobs:
   run_percy:
     runs-on: ubuntu-latest
+    env: 
+      PERCY_PARALLEL_TOTAL: 2
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
@@ -40,5 +42,4 @@ jobs:
       - run: npm install
       - name: Set Up Chrome
         uses: browser-actions/setup-chrome@v1
-      - run: npx percy exec -- node project/site_specific/tests/percy/percy.js
-      - run: npx percy exec -- node project/global/tests/percy/percy.js
+      - run: npx percy exec -- node project/site_specific/tests/percy/percy.js && npx percy exec -- node project/global/tests/percy/percy.js
