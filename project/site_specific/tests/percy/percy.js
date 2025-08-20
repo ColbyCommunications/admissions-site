@@ -25,7 +25,7 @@ let siteFull = `https://${site}`;
 	await new Promise(function (resolve) {
 		setTimeout(async function () {
 			await homePage.evaluate(scrollToBottom, scrollOptions);
-			await percySnapshot(homePage, "Snapshot of test page");
+			await percySnapshot(homePage, "Snapshot of home page");
 			resolve();
 		}, 3000);
 	});
