@@ -18,7 +18,7 @@
         "colbycommunications/colby-ticket": "^1.0.0",
         "wpackagist-plugin/wp-search-with-algolia": "2.10.1",
         "vlucas/phpdotenv": "^5.4",
-        "colbycommunications/colby-college-theme": "3.5.3",
+        "colbycommunications/colby-college-theme": "3.6.0",
         "timber/timber": "2.3.1",
         "wpackagist-plugin/regenerate-thumbnails": "3.1.6",
         "wpackagist-plugin/disable-comments": "2.5.2",
