@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62fc27ae950a1d766fd2cb7fdc1496a2",
+    "content-hash": "c8404b158ae3986784bb4a00926d04dc",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -267,11 +267,11 @@
         },
         {
             "name": "colbycommunications/colby-college-theme",
-            "version": "3.3.1",
+            "version": "3.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ColbyCommunications/colby-college-theme",
-                "reference": "db92de3e33d145d46c9dcd26ec209ba700b9d01d"
+                "reference": "024384c2df1dfdccde87b87ba254b8172f372913"
             },
             "require": {
                 "php": ">=7.1"
@@ -287,7 +287,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2025-05-01T18:19:42+00:00"
+            "time": "2025-11-06T13:20:40+00:00"
         },
         {
             "name": "colbycommunications/colby-counselors",

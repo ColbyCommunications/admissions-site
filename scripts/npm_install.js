@@ -29,7 +29,7 @@ fs.readFile('./project/site_specific/package.json', 'utf8', (err, data) => {
         ...npmData.scripts,
     };
 
-    const outputData = JSON.stringify(siteRequirementsData, null, 2);
+    const outputData = JSON.stringify(siteRequirementsData, null, 4);
 
     fs.writeFile('package.json', outputData, (err) => {
         if (err) {

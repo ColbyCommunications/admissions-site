@@ -23,7 +23,7 @@ fs.readFile('./project/site_specific/composer_requirements.json', 'utf8', (err, 
     ]['web/wp-content/mu-plugins/{$name}'].concat(
         siteRequirementsData.extra['installer-paths']['web/wp-content/mu-plugins/{$name}']
     );
-    const outputData = JSON.stringify(composerData, null, 2);
+    const outputData = JSON.stringify(composerData, null, 4);
 
     fs.writeFile('composer.json', outputData, (err) => {
         if (err) {
