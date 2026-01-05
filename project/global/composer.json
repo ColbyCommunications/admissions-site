@@ -4,11 +4,11 @@
     "type": "project",
     "require": {
         "johnpbloch/wordpress-core-installer": "^2.0",
-        "johnpbloch/wordpress-core": "6.8.1",
+        "johnpbloch/wordpress-core": "6.9.0",
         "wpackagist-plugin/header-footer": "3.3.2",
         "wpackagist-plugin/duplicate-post": "4.5",
         "wpackagist-plugin/wordpress-seo": "25.3.1",
-        "wpackagist-plugin/cloudflare": "4.12.8",
+        "wpackagist-plugin/cloudflare": "4.14.2",
         "wpackagist-plugin/public-post-preview": "3.0.1",
         "wpackagist-plugin/wp-saml-auth": "2.2.0",
         "wp-cli/wp-cli-bundle": "^2.4",
@@ -18,15 +18,16 @@
         "colbycommunications/colby-ticket": "^1.0.0",
         "wpackagist-plugin/wp-search-with-algolia": "2.10.1",
         "vlucas/phpdotenv": "^5.4",
-        "colbycommunications/colby-college-theme": "3.3.1",
+        "colbycommunications/colby-college-theme": "3.6.0",
         "timber/timber": "2.3.1",
         "wpackagist-plugin/regenerate-thumbnails": "3.1.6",
-        "wpackagist-plugin/disable-comments": "2.5.2",
+        "wpackagist-plugin/disable-comments": "2.6.1",
         "colbycommunications/capabilities-pro": "2.19.2",
         "wpackagist-plugin/wp-nested-pages": "3.2.13",
-        "wpackagist-plugin/user-switching": "1.9.1",
+        "wpackagist-plugin/user-switching": "1.11.1",
         "colbycommunications/presspermit-pro": "4.3.2",
-        "wpackagist-plugin/advanced-gutenberg": "3.2.4"
+        "wpackagist-plugin/advanced-gutenberg": "3.6.2",
+        "wpackagist-plugin/tinymce-advanced": "5.9.2"
     },
     "authors": [
         {
