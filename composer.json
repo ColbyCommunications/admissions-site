@@ -13,7 +13,7 @@
 		"wpackagist-plugin/wp-saml-auth": "2.2.0",
 		"wp-cli/wp-cli-bundle": "^2.4",
 		"psy/psysh": "^0.10.4",
-		"colbycommunications/advanced-custom-fields-pro": "6.4.2",
+		"colbycommunications/advanced-custom-fields-pro": "6.7.0.2",
 		"colbycommunications/gravityforms": "2.9.11",
 		"colbycommunications/colby-ticket": "^1.0.0",
 		"wpackagist-plugin/wp-search-with-algolia": "2.11.1",
