@@ -7,14 +7,14 @@
 		"wpackagist-plugin/accordion-blocks": "1.5.0",
 		"wpackagist-plugin/acf-extended": "0.8.7.6",
 		"wpackagist-plugin/admin-bar-in-fullscreen-mode": "1.0.0",
-		"wpackagist-plugin/simple-history": "5.15.0",
+		"wpackagist-plugin/simple-history": "5.22.0",
 		"wpackagist-plugin/svg-support": "2.5.14",
-		"wpackagist-plugin/ultimate-dashboard": "3.8.9",
-		"wpackagist-plugin/redirection": "5.5.2",
-		"wpackagist-plugin/duracelltomi-google-tag-manager": "1.21.1",
+		"wpackagist-plugin/ultimate-dashboard": "3.8.12",
+		"wpackagist-plugin/redirection": "5.6.0",
+		"wpackagist-plugin/duracelltomi-google-tag-manager": "1.22.3",
 		"wpackagist-plugin/acf-content-analysis-for-yoast-seo": "3.2",
-		"wpackagist-plugin/wordpress-importer": "0.8.4",
-		"wpackagist-plugin/term-management-tools": "2.0.1"
+		"wpackagist-plugin/wordpress-importer": "0.9.5",
+		"wpackagist-plugin/term-management-tools": "2.0.2"
 	},
 	"repositories": [
 		{
