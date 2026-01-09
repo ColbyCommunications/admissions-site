@@ -9,6 +9,7 @@ env:
   PLATFORM_PROJECT_ID: ${{ secrets.PLATFORM_PROJECT_ID }}
   PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
   WEBMASTER_GITHUB_ACTIONS_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
+  CYPRESS_ENV_JSON: ${{ secrets.CYPRESS_ENV_JSON }}
 jobs:
   run_percy:
     runs-on: ubuntu-latest
@@ -42,4 +43,7 @@ jobs:
       - run: npm install
       - name: Set Up Chrome
         uses: browser-actions/setup-chrome@v1
+      - name: Load Secrets from JSON to Env
+        run: |
+          echo '${{ secrets.CYPRESS_ENV_JSON }}' | jq -r 'to_entries|map("\(.key)=\(.value)")|.[]' >> $GITHUB_ENV
       - run: npx percy exec -- node project/site_specific/tests/percy/percy.js && npx percy exec -- node project/global/tests/percy/percy.js
