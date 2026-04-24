@@ -50,12 +50,12 @@ class Algolia_Command {
 				if ( isset( $assoc_args['verbose'] ) && $assoc_args['verbose'] ) {
 					WP_CLI::line( 'Serializing [' . $post->post_title . ']' );
 				}
-				$record = (array) apply_filters( 'post_to_record1', $post );
+				$record = (array) apply_filters( 'post_to_record', $post );
 
 				$entry = array();
 				if ( get_post_type( $post ) !== 'counselors' ) {
 					$entry['title']       = $record['post_title'];
-					$entry['description'] = get_the_content($post->ID);
+					$entry['description'] = $post->post_content;
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
 				} else {
