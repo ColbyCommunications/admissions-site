@@ -55,10 +55,7 @@ class Algolia_Command {
 				$entry = array();
 				if ( get_post_type( $post ) !== 'counselors' ) {
 					$entry['title']       = $record['post_title'];
-					$entry['description'] = 
-					!empty(trim(get_the_content($post->ID)))
-					? trim(get_the_content($post->ID))
-					: "Apply to Colby College and learn more about financial aid opportunities.";
+					$entry['description'] = get_the_content($post->ID);
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
 				} else {
