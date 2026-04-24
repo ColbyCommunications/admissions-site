@@ -50,14 +50,14 @@ class Algolia_Command {
 				if ( isset( $assoc_args['verbose'] ) && $assoc_args['verbose'] ) {
 					WP_CLI::line( 'Serializing [' . $post->post_title . ']' );
 				}
-				$record = (array) apply_filters( 'post_to_record', $post );
+				$record = (array) apply_filters( 'post_to_record1', $post );
 
 				$entry = array();
 				if ( get_post_type( $post ) !== 'counselors' ) {
 					$entry['title']       = $record['post_title'];
 					$entry['description'] = 
-					!empty(trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc'))))
-					? trim(implode(get_post_meta($post->ID, '_yoast_wpseo_metadesc')))
+					!empty(trim(get_the_content($post->ID)))
+					? trim(get_the_content($post->ID))
 					: "Apply to Colby College and learn more about financial aid opportunities.";
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
