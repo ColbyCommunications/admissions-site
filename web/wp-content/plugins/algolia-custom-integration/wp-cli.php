@@ -55,7 +55,7 @@ class Algolia_Command {
 				$entry = array();
 				if ( get_post_type( $post ) !== 'counselors' ) {
 					$entry['title']       = $record['post_title'];
-					$entry['description'] = $post->post_content;
+					$entry['description'] = trim(strip_shortcodes(wp_strip_all_tags($post->post_content)));
 					$entry['url']         = get_permalink( $post );
 					$entry['tags']        = $tags;
 				} else {
