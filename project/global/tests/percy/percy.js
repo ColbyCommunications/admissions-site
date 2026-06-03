@@ -1,7 +1,7 @@
-const puppeteer = require("puppeteer");
-const percySnapshot = require("@percy/puppeteer");
-const scrollToBottom = require("scroll-to-bottomjs");
-const { execSync } = require("child_process");
+const puppeteer = require('puppeteer');
+const percySnapshot = require('@percy/puppeteer');
+const scrollToBottom = require('scroll-to-bottomjs');
+const { execSync } = require('child_process');
 
 // --- 1. The Reusable Login Routine (Mimics Cypress before()) ---
 async function loginToWordPress(page, siteUrl) {
