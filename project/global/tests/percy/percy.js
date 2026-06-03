@@ -5,41 +5,39 @@ const { execSync } = require("child_process");
 
 // --- 1. The Reusable Login Routine (Mimics Cypress before()) ---
 async function loginToWordPress(page, siteUrl) {
-	// Check if env vars are present to avoid hanging
-	if (!process.env.WP_USERNAME || !process.env.WP_PASSWORD) {
-		throw new Error(
-			"WP_USERNAME and WP_PASSWORD environment variables are missing!"
-		);
-	}
-	console.log(`${siteUrl}/wp/wp-admin/`);
-	// cy.visit('/wp/wp-admin/')
-	await page.goto(`${siteUrl}/wp/wp-admin/`, { waitUntil: "networkidle2" });
+    // Check if env vars are present to avoid hanging
+    if (!process.env.WP_USERNAME || !process.env.WP_PASSWORD) {
+        throw new Error('WP_USERNAME and WP_PASSWORD environment variables are missing!');
+    }
+    console.log(`${siteUrl}/wp/wp-admin/`);
+    // cy.visit('/wp/wp-admin/')
+    await page.goto(`${siteUrl}/wp/wp-admin/`, { waitUntil: 'networkidle2' });
 
-	// cy.get('#user_login').type(...)
-	await page.type("#user_login", process.env.WP_USERNAME);
+    // cy.get('#user_login').type(...)
+    await page.type('#user_login', process.env.WP_USERNAME);
 
-	// cy.get('#user_pass').type(...)
-	await page.type("#user_pass", process.env.WP_PASSWORD);
+    // cy.get('#user_pass').type(...)
+    await page.type('#user_pass', process.env.WP_PASSWORD);
 
-	// cy.get('#wp-submit').click()
-	// Puppeteer requires us to explicitly wait for the navigation to complete after a click
-	await Promise.all([
-		page.waitForNavigation({ waitUntil: "networkidle2" }),
-		page.click("#wp-submit"),
-	]);
+    // cy.get('#wp-submit').click()
+    // Puppeteer requires us to explicitly wait for the navigation to complete after a click
+    await Promise.all([
+        page.waitForNavigation({ waitUntil: 'networkidle2' }),
+        page.click('#wp-submit'),
+    ]);
 
-	console.log("Login successful.");
+    console.log('Login successful.');
 }
 
 // --- Your Existing Setup Code ---
-const branch = execSync("git rev-parse --abbrev-ref HEAD", {
-	encoding: "utf8",
+const branch = execSync('git rev-parse --abbrev-ref HEAD', {
+    encoding: 'utf8',
 }).trim();
 let site;
-if (branch === "master") {
-	site = execSync("~/.platformsh/bin/platform environment:info default_domain");
+if (branch === 'master') {
+    site = execSync('~/.platformsh/bin/platform environment:info default_domain');
 } else {
-	site = execSync("~/.platformsh/bin/platform environment:info edge_hostname");
+    site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
 }
 let siteFull = `https://${site}`;
 
@@ -49,11 +47,11 @@ let siteFull = `https://${site}`;
 		args: ["--no-sandbox", "--disable-setuid-sandbox"],
 	});
 
-	const scrollOptions = { frequency: 100, timing: 200 };
-	const testPage = await browser.newPage();
+    const scrollOptions = { frequency: 100, timing: 200 };
+    const testPage = await browser.newPage();
 
-	// 2. Navigate to the test page (now logged in)
-	await testPage.setUserAgent("colby-github");
+    // 2. Navigate to the test page (now logged in)
+    await testPage.setUserAgent('colby-github');
 
 	// 1. Run the Login Routine
 	// This sets the cookies in the local Puppeteer browser
