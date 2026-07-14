@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Admissions Site Lighthouse Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h1>Branches</h1>
+      </div>
+      <div id="branches" x-data="loadBranchData()" x-init="init()">
+        <ul>
+          <template x-for="branch in data" :key="branch.name">
+            <li><a x-bind:href="branch.name" target="_blank" x-text="branch.name"></a></li>                                   
+          </template>
+        </ul>
+      </div>
+    </div>
+    <script>
+      function loadBranchData() {
+        return {
+          data: [],
+          init() {
+            fetch('./branches.json')
+              .then(res => res.json())
+              .then(data => {
+                console.log(data);
+                this.data = data.branches;
+            });
+          }
+        } 
+      }
+    </script>
+  </body>
+</html>
