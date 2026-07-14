@@ -61,7 +61,7 @@ jobs:
       - uses: actions/checkout@v7
       - name: Install Psh CLI
         run: |
-          curl -sS https://platform.sh/cli/installer | php
+          curl -fsSL https://raw.githubusercontent.com/upsun/cli/main/installer.sh | bash
           upsun project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
 
       - name: Setup node
