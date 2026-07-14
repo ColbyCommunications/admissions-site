@@ -7,7 +7,7 @@
         "johnpbloch/wordpress-core": "7.0.0",
         "wpackagist-plugin/header-footer": "3.3.6",
         "wpackagist-plugin/duplicate-post": "4.6",
-        "wpackagist-plugin/wordpress-seo": "27.7",
+        "wpackagist-plugin/wordpress-seo": "27.8",
         "wpackagist-plugin/cloudflare": "4.14.3",
         "wpackagist-plugin/public-post-preview": "3.1.0",
         "wpackagist-plugin/wp-saml-auth": "2.3.2",
@@ -65,6 +65,9 @@
         }
     },
     "config": {
-        "allow-plugins": true
+        "allow-plugins": true,
+        "audit": {
+            "block-insecure": false
+        }
     }
 }

@@ -35,9 +35,9 @@ const branch = execSync('git rev-parse --abbrev-ref HEAD', {
 }).trim();
 let site;
 if (branch === 'master') {
-    site = execSync('~/.platformsh/bin/platform environment:info default_domain');
+    site = execSync('upsun environment:info default_domain');
 } else {
-    site = execSync('~/.platformsh/bin/platform environment:info edge_hostname');
+    site = execSync('upsun environment:info edge_hostname');
 }
 let siteFull = `https://${site}`;
 

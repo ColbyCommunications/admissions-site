@@ -5,7 +5,7 @@ on:
     branches-ignore:
       - 'master'
 env:
-  PLATFORMSH_CLI_TOKEN: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
+  UPSUN_CLI_TOKEN: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
   WEBMASTER_GITHUB_ACTIONS_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
   PLATFORM_PROJECT_ID: ${{ secrets.PLATFORM_PROJECT_ID }}
   PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
@@ -15,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-      - uses: webfactory/ssh-agent@v0.7.0
+        uses: actions/checkout@v7
+      - uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.WEBMASTER_SSH_PRIVATE_KEY }}
 
-      - name: Install Psh CLI
+      - name: Install Upsun CLI
         run: |
-          curl -sS https://platform.sh/cli/installer | php
+          curl -fsSL https://raw.githubusercontent.com/upsun/cli/main/installer.sh | bash
 
       - name: Load certificate
-        run: ~/.platformsh/bin/platform ssh-cert:load -y -vv
+        run: upsun ssh-cert:load --no-interaction
 
       - name: Add Psh to trusted keys
         continue-on-error: true
@@ -38,8 +38,8 @@ jobs:
 
       - name: Delete PR Platform Branch
         run: |
-          ~/.platformsh/bin/platform project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
-          ~/.platformsh/bin/platform environment:delete ${GITHUB_HEAD_REF} --project=${{ secrets.PLATFORM_PROJECT_ID }} --delete-branch
+          upsun project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
+          upsun environment:delete ${GITHUB_HEAD_REF} --project=${{ secrets.PLATFORM_PROJECT_ID }} --delete-branch
       
       - name: Clone Pages
         run: |
@@ -52,7 +52,7 @@ jobs:
           
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: ghpages
           build_dir: public
