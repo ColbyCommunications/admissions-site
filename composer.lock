@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1655e2fd931c468551d7894e17537682",
+    "content-hash": "67de3d46a4c11a3da5f579b4a2aa2b17",
     "packages": [
         {
             "name": "ahebrank/wp-frontback",
@@ -135,16 +135,16 @@
         },
         {
             "name": "colbycommunications/advanced-custom-fields-pro",
-            "version": "6.8.2",
+            "version": "6.8.10",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ColbyCommunications/advanced-custom-fields-pro.git",
-                "reference": "f58a2f2d286e7002e8c93191a1eba590a50bb114"
+                "reference": "3b62160158918cd21a4bce9695746608d57d5abf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://satis.colby.edu/dist/colbycommunications/advanced-custom-fields-pro/colbycommunications-advanced-custom-fields-pro-f58a2f2d286e7002e8c93191a1eba590a50bb114-zip-751286.zip",
-                "reference": "f58a2f2d286e7002e8c93191a1eba590a50bb114"
+                "url": "https://satis.colby.edu/dist/colbycommunications/advanced-custom-fields-pro/colbycommunications-advanced-custom-fields-pro-3b62160158918cd21a4bce9695746608d57d5abf-zip-81b87e.zip",
+                "reference": "3b62160158918cd21a4bce9695746608d57d5abf"
             },
             "type": "wordpress-plugin",
             "autoload": {
@@ -164,10 +164,10 @@
                 "wordpress"
             ],
             "support": {
-                "source": "https://github.com/ColbyCommunications/advanced-custom-fields-pro/tree/6.8.2",
+                "source": "https://github.com/ColbyCommunications/advanced-custom-fields-pro/tree/6.8.10",
                 "issues": "https://github.com/ColbyCommunications/advanced-custom-fields-pro/issues"
             },
-            "time": "2026-06-02T16:21:28+00:00"
+            "time": "2026-10-23T13:57:02+00:00"
         },
         {
             "name": "colbycommunications/capabilities-pro",
