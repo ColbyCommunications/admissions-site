@@ -4,7 +4,7 @@ on:
     branches:
       - 'dev'
 env:
-  PLATFORMSH_CLI_TOKEN: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
+  UPSUN_CLI_TOKEN: ${{ secrets.PLATFORMSH_CLI_TOKEN }}
   WEBMASTER_GITHUB_ACTIONS_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
   PLATFORM_PROJECT_ID: ${{ secrets.PLATFORM_PROJECT_ID }}
   PROJECT_NAME: ${{ secrets.PROJECT_NAME }}
@@ -14,18 +14,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
-      - uses: webfactory/ssh-agent@v0.7.0
+      - uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.WEBMASTER_SSH_PRIVATE_KEY }}
 
-      - name: Install Psh CLI
+      - name: Install Upsun CLI
         run: |
-          curl -sS https://platform.sh/cli/installer | php
+          curl -fsSL https://raw.githubusercontent.com/upsun/cli/main/installer.sh | bash
 
       - name: Load certificate
-        run: ~/.platformsh/bin/platform ssh-cert:load -y -vv
+        run: upsun ssh-cert:load --no-interaction
 
       - name: Add Psh to trusted keys
         continue-on-error: true
@@ -38,34 +38,35 @@ jobs:
   
       - name: Check Environment Exists
         run: |
-          ~/.platformsh/bin/platform project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
+          upsun project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
           node ./scripts/check_platform_feature_branch.js --branch=${GITHUB_REF#refs/heads/} --branchFrom=master --id=${{ secrets.PLATFORM_PROJECT_ID }}
         
       - name: Spin up environment
         if: "!contains(github.event.head_commit.message, '[skip platform]')"
         run: |
-          ~/.platformsh/bin/platform project:get ${{ secrets.PLATFORM_PROJECT_ID }} platform-remote --environment=${GITHUB_REF#refs/heads/}
+          upsun project:get ${{ secrets.PLATFORM_PROJECT_ID }} platform-remote --environment=${GITHUB_REF#refs/heads/}
           cd platform-remote
-          ~/.platformsh/bin/platform project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
+          upsun project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
           git config --global user.email "webmaster@colby.edu"
           git config --global user.name "Colby Webmaster"
+          git config pull.rebase false
           git pull -X theirs git@github.com:ColbyCommunications/${{ github.event.repository.name }}.git ${GITHUB_REF#refs/heads/}
-          ~/.platformsh/bin/platform environment:push -vv --target=${GITHUB_REF#refs/heads/} --project=${{ secrets.PLATFORM_PROJECT_ID }} --environment=${GITHUB_HEAD_REF} --force
+          upsun environment:push -vv --target=${GITHUB_REF#refs/heads/} --project=${{ secrets.PLATFORM_PROJECT_ID }} --environment=${GITHUB_HEAD_REF} --force
 
   test_prep:
     runs-on: ubuntu-latest
     needs: deploy_platform
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - name: Install Psh CLI
         run: |
-          curl -sS https://platform.sh/cli/installer | php
-          ~/.platformsh/bin/platform project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
+          curl -fsSL https://raw.githubusercontent.com/upsun/cli/main/installer.sh | bash
+          upsun project:set-remote ${{ secrets.PLATFORM_PROJECT_ID }}
 
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: '20.x'
+          node-version: '24.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
         env:
@@ -77,7 +78,7 @@ jobs:
           ./scripts/sitemap.sh
 
       - name: Archive sitemap
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: sitemap
           path: .github/sitemap.json
@@ -92,24 +93,24 @@ jobs:
     runs-on: ubuntu-latest
     needs: test_prep
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v7
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: '20.x'
+          node-version: '24.x'
           registry-url: 'https://npm.pkg.github.com'
       - run: npm install
         env:
           NODE_AUTH_TOKEN: ${{ secrets.WEBMASTER_GITHUB_ACTIONS_TOKEN }}
       - run: npm install -g lighthouse-batch
       - name: Download a single artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: sitemap
       - name: Audit URLs using Lighthouse
         run: npx lighthouse-batch -s $( jq -r '.urls | join(",")' sitemap.json ) --params "--extra-headers=.github/lighthouse_headers.json" --html --print
       - name: Archive Lighthouse Results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: results
           path: report/lighthouse
@@ -119,14 +120,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: lighthouse
     steps:
-      - uses: actions/checkout@v3
-      - uses: webfactory/ssh-agent@v0.7.0
+      - uses: actions/checkout@v7
+      - uses: webfactory/ssh-agent@v0.9.0
         with:
           ssh-private-key: ${{ secrets.WEBMASTER_SSH_PRIVATE_KEY }}
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
-          node-version: '20.x'
+          node-version: '24.x'
           registry-url: 'https://npm.pkg.github.com'
       - name: Clone Pages
         run: |
@@ -135,7 +136,7 @@ jobs:
           git clone --branch ghpages git@github.com:ColbyCommunications/${{ github.event.repository.name }}.git public
           rm -rf public/.git
       - name: Download lighthouse results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: results
           path: report/lighthouse
@@ -281,7 +282,7 @@ jobs:
           EOL
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: ghpages
           build_dir: public

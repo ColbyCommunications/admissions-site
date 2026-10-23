@@ -6,7 +6,7 @@ const { env } = process;
 fs.closeSync(fs.openSync('.env', 'w'));
 
 exec(
-    'platform variable:list --no-header --columns=name,value --format=csv',
+    'upsun variable:list --no-header --columns=name,value --format=csv',
     (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
