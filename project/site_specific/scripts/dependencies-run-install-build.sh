@@ -23,3 +23,11 @@ composer dump-autoload
 npm install
 npm run production
 cd -
+
+printf "Build Colby Theme..."
+cd web/wp-content/themes/colby-college-theme-inertia
+composer install
+composer dump-autoload
+npm install
+npm run build
+cd -

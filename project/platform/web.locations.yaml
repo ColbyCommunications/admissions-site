@@ -59,3 +59,11 @@
 ###     Project Specific    ###
 ###############################
 # Add any additional project specific php dependencies you need in the environment after this line
+
+"/_healthcheck":
+  root: '_healthcheck'
+  allow: true
+  scripts: false
+  expires: -1
+  index:
+    - index.html
